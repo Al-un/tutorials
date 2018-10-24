@@ -1,0 +1,13 @@
+# Add ignored files and folder here
+
+# ----- Angular
+# handled at projects level
+
+# ----- Java
+# N/A
+
+# ----- NodeJS
+node/*/node_modules/
+
+# ----- Ruby
+# handled at projects level

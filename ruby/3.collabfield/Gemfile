@@ -1,0 +1,123 @@
+source 'https://rubygems.org'
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby '2.5.1'
+
+# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
+gem 'rails', '~> 5.2.1'
+# Use postgresql as the database for Active Record
+gem 'pg', '>= 0.18', '< 2.0'
+# Use Puma as the app server
+gem 'puma', '~> 3.11'
+# Use SCSS for stylesheets
+gem 'sass-rails', '~> 5.0'
+# Use Uglifier as compressor for JavaScript assets
+gem 'uglifier', '>= 1.3.0'
+# See https://github.com/rails/execjs#readme for more supported runtimes
+gem 'duktape'
+# Use CoffeeScript for .coffee assets and views
+gem 'coffee-rails', '~> 4.2'
+# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
+gem 'turbolinks', '~> 5'
+# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'jbuilder', '~> 2.5'
+# Use Redis adapter to run Action Cable in production
+# gem 'redis', '~> 4.0'
+# Use ActiveModel has_secure_password
+# gem 'bcrypt', '~> 3.1.7'
+
+# Use ActiveStorage variant
+# gem 'mini_magick', '~> 4.8'
+
+# Use Capistrano for deployment
+# gem 'capistrano-rails', group: :development
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', '>= 1.1.0', require: false
+
+# SASS
+gem 'bootstrap-sass', '~> 3.3.7'
+# gem 'sass-rails' already defined
+gem 'jquery-rails' # for bootstrap
+# Devise: authentication
+gem 'devise'
+gem 'bootstrap_form' # Required in Devise form
+gem 'faker' #Lorem ipsum dolor...
+gem 'will_paginate', '~> 3.1.0' # posts pagination
+gem 'gon' # JavaScript stuff 
+
+group :development, :test do
+  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
+  gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+
+  gem 'rspec-rails', '~> 3.6'
+  # https://github.com/thoughtbot/factory_bot/blob/v4.9.0/UPGRADE_FROM_FACTORY_GIRL.md 
+  # gem 'factory_girl_rails'
+  gem 'factory_bot_rails'
+  gem 'rails-controller-testing'
+  gem 'headless'
+  gem 'capybara'
+  gem 'poltergeist'
+  gem 'database_cleaner'
+end
+
+group :development do
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'web-console', '>= 3.3.0'
+end
+
+group :test do
+  # Adds support for Capybara system testing and selenium driver
+  # gem 'capybara', '>= 2.15'
+  # gem 'selenium-webdriver' ==> not used
+  # Easy installation and use of chromedriver to run system tests with Chrome
+  # gem 'chromedriver-helper'
+  # removed due to 
+=begin
+ Failure/Error: require File.expand_path('../config/environment', __dir__)
+
+Bundler::GemRequireError:
+  There was an error while trying to load the gem 'chromedriver-helper'.
+  Gem Load Error is: not executable: "C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/chromedriver-helper-2.1.0/bin/chromedriver-helper"
+  Backtrace for gem load error is:
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/selenium-webdriver-3.14.0/lib/selenium/webdriver/common/platform.rb:130:in `assert_executable'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/selenium-webdriver-3.14.0/lib/selenium/webdriver/chrome.rb:30:in `driver_path='
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/chromedriver-helper-2.1.0/lib/chromedriver-helper.rb:4:in `<top (required)>'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `require'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:21:in `block in require_with_bootsnap_lfi'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/loaded_features_index.rb:65:in `register'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:20:in `require_with_bootsnap_lfi'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bootsnap-1.3.2/lib/bootsnap/load_path_cache/core_ext/kernel_require.rb:29:in `require'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.4/lib/bundler/runtime.rb:81:in `block (2 levels) in require'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.4/lib/bundler/runtime.rb:76:in `each'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.4/lib/bundler/runtime.rb:76:in `block in require'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.4/lib/bundler/runtime.rb:65:in `each'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.4/lib/bundler/runtime.rb:65:in `require'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/bundler-1.16.4/lib/bundler.rb:114:in `require'
+  D:/G33k_Zone/github_alun/ruby_tutorial/3.collabfield/config/application.rb:7:in `<top (required)>'
+  D:/G33k_Zone/github_alun/ruby_tutorial/3.collabfield/config/environment.rb:2:in `require_relative'
+  D:/G33k_Zone/github_alun/ruby_tutorial/3.collabfield/config/environment.rb:2:in `<top (required)>'
+  C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require'
+  C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require'
+  D:/G33k_Zone/github_alun/ruby_tutorial/3.collabfield/spec/rails_helper.rb:6:in `<top (required)>'
+  C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require'
+  C:/Ruby25-x64/lib/ruby/2.5.0/rubygems/core_ext/kernel_require.rb:59:in `require'
+  D:/G33k_Zone/github_alun/ruby_tutorial/3.collabfield/spec/helpers/navigation_helper_spec.rb:1:in `<top (required)>'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/configuration.rb:2034:in `load'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/configuration.rb:2034:in `load_file_handling_errors'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/configuration.rb:1560:in `block in load_spec_files'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/configuration.rb:1558:in `each'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/configuration.rb:1558:in `load_spec_files'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/runner.rb:98:in `setup'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/runner.rb:86:in `run'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/runner.rb:71:in `run'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/lib/rspec/core/runner.rb:45:in `invoke'
+  C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/rspec-core-3.8.0/exe/rspec:4:in `<top (required)>'
+  C:/Ruby25-x64/bin/rspec:23:in `load'
+  C:/Ruby25-x64/bin/rspec:23:in `<main>'
+  Bundler Error Backtrace:
+=end
+end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]

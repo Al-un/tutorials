@@ -1,0 +1,45 @@
+<div class="main-container">
+
+  <div class="main-left-panel">
+
+    <nav>
+
+      <div *ngIf="auth.userProfile">
+        <p>Nickname: {{ auth.userProfile.name }}</p>
+      </div>
+
+      <ul>
+        <li>
+          <a routerLink="/">Home</a>
+        </li>
+        <li>
+          <a routerLink="/restricted">Restricted</a>
+        </li>
+        <li>
+          <a routerLink="/admin/page1">Admin 1</a>
+        </li>
+        <li *ngIf="auth.isAuthenticated()">
+          <a routerLink="/admin/page2">Admin 2</a>
+        </li>
+      </ul>
+
+      <button id="loginBtn" *ngIf="!auth.isAuthenticated()" (click)="auth.login()" type="button">
+        Log In
+      </button>
+
+      <button id="logoutBtn" *ngIf="auth.isAuthenticated()" (click)="auth.logout()" type="button">
+        Log Out
+      </button>
+
+    </nav>
+
+  </div>
+
+  <div class="main-right-panel">
+    <router-outlet></router-outlet>
+
+    <hr />
+    <pre>{{ auth.userProfile | json }}</pre>
+  </div>
+
+</div>

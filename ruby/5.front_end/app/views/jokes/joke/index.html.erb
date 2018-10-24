@@ -1,0 +1,14 @@
+<%= form_with(url: '/jokes/all', method: 'get')  do |f| %>
+
+    <%= f.check_box :nerdy %>
+    <%= f.label :nerdy %>
+
+    <%= f.check_box :explicit %>
+    <%= f.label :explicit %>
+
+    <%= f.submit %>
+<% end %>
+
+<% @jokes.each do |joke| %>
+<%= render partial: '/jokes/shared/joke', locals: {joke: joke} %>
+<% end %>

@@ -1,0 +1,3 @@
+<% @jokes.each do |joke| %>
+<%= render partial: '/jokes/shared/joke', locals: {joke: joke} %>
+<% end %>

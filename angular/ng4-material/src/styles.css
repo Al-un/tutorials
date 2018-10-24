@@ -1,0 +1,16 @@
+/* You can add global styles to this file, and also import other style files */
+
+/**
+Based on your preferences, you can change indigo-pink.css to:
+
+    deeppurple-amber.css
+    indigo-pink.css
+    pink-bluegrey.css
+    purple-green.css
+*/
+@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+
+body{
+    padding: 2em 23em;
+    background: lightgray;
+}

@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": "quickstart"
+		},
+		{
+			"path": "angular-reactive-forms"
+		},
+		{
+			"path": "angular-tour-of-heroes"
+		},
+		{
+			"path": "ng4-material"
+		},
+		{
+			"path": "my-new-project"
+		}
+	]
+}
