@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name          = 'hola-pouet'
-  s.version       = '0.0.4'
+  s.version       = '0.0.6'
   s.date          = '2018-11-08'
   s.summary       = 'Hola world (pouet)'
   s.description   = 'Hola description'
