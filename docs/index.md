@@ -12,3 +12,4 @@ Here are some deployed tutorial applications:
     [React main concepts](https://reactjs.org/docs/hello-world.html)
 4.  [Randomuser](/tutorials/react/randomuser) from repository
     (https://github.com/Al-un/tutorials/tree/master/react/3.randomuser)
+5.  [Router testing](/tutorials/react/test-router)
