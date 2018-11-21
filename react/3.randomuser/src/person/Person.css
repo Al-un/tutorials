@@ -1,0 +1,43 @@
+.Person {
+    border: 1px solid darkmagenta;
+    padding: 8px;
+    margin: 8px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Person-picture-container {
+    border-radius: 50%;
+    padding: 6px;
+    width: 180px;
+    text-align: center;
+}
+
+.Person-picture {
+    border: 1px solid darkslateblue;
+    border-radius: 50%;
+    width: 128px;
+    height: 128px;
+}
+
+.Person-info {
+    flex: 1;
+}
+
+.Person-info-entry {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Person-info-subject {
+    width: 100%;
+    max-width: 300px;
+    font-style: italic;
+    margin: 4px 0;
+}
+
+.Person-info-value {
+    width: 100%;
+    max-width: 300px;
+    font-weight: bold;
+}
