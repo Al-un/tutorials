@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Joke } from './joke';
-import { Observable } from 'rxjs';
+import { Observable ,  Subject, merge } from 'rxjs';
 import { JokeService } from './joke.service';
 import { Memoize } from 'lodash-decorators';
 import { take, mergeMap, skip, mapTo, switchMap } from 'rxjs/operators';
-import { Subject, merge } from 'rxjs';
 
 @Component({
   selector: 'app-joke-list',
