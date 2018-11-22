@@ -1,14 +1,14 @@
 {
-  "main.css": "/tuturials/react/randomuser/static/css/main.e306eae8.chunk.css",
-  "main.js": "/tuturials/react/randomuser/static/js/main.0a03e611.chunk.js",
-  "main.js.map": "/tuturials/react/randomuser/static/js/main.0a03e611.chunk.js.map",
-  "static/js/1.d855c10c.chunk.js": "/tuturials/react/randomuser/static/js/1.d855c10c.chunk.js",
-  "static/js/1.d855c10c.chunk.js.map": "/tuturials/react/randomuser/static/js/1.d855c10c.chunk.js.map",
-  "runtime~main.js": "/tuturials/react/randomuser/static/js/runtime~main.41d87435.js",
-  "runtime~main.js.map": "/tuturials/react/randomuser/static/js/runtime~main.41d87435.js.map",
-  "static/media/react_logo.svg": "/tuturials/react/randomuser/static/media/react_logo.5d5d9eef.svg",
-  "static/css/main.e306eae8.chunk.css.map": "/tuturials/react/randomuser/static/css/main.e306eae8.chunk.css.map",
-  "index.html": "/tuturials/react/randomuser/index.html",
-  "precache-manifest.978967f47f25bb48f2db00d14176c667.js": "/tuturials/react/randomuser/precache-manifest.978967f47f25bb48f2db00d14176c667.js",
-  "service-worker.js": "/tuturials/react/randomuser/service-worker.js"
+  "main.css": "/tutorials/react/randomuser/static/css/main.e306eae8.chunk.css",
+  "main.js": "/tutorials/react/randomuser/static/js/main.8ef1667e.chunk.js",
+  "main.js.map": "/tutorials/react/randomuser/static/js/main.8ef1667e.chunk.js.map",
+  "static/js/1.d855c10c.chunk.js": "/tutorials/react/randomuser/static/js/1.d855c10c.chunk.js",
+  "static/js/1.d855c10c.chunk.js.map": "/tutorials/react/randomuser/static/js/1.d855c10c.chunk.js.map",
+  "runtime~main.js": "/tutorials/react/randomuser/static/js/runtime~main.ac94779b.js",
+  "runtime~main.js.map": "/tutorials/react/randomuser/static/js/runtime~main.ac94779b.js.map",
+  "static/media/react_logo.svg": "/tutorials/react/randomuser/static/media/react_logo.5d5d9eef.svg",
+  "static/css/main.e306eae8.chunk.css.map": "/tutorials/react/randomuser/static/css/main.e306eae8.chunk.css.map",
+  "index.html": "/tutorials/react/randomuser/index.html",
+  "precache-manifest.50345cfae0ecbddca10d1070dfd9261e.js": "/tutorials/react/randomuser/precache-manifest.50345cfae0ecbddca10d1070dfd9261e.js",
+  "service-worker.js": "/tutorials/react/randomuser/service-worker.js"
 }

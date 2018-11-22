@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/tuturials/react/randomuser/precache-manifest.978967f47f25bb48f2db00d14176c667.js"
+  "/tutorials/react/randomuser/precache-manifest.50345cfae0ecbddca10d1070dfd9261e.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/tuturials/react/randomuser/index.html", {
+workbox.routing.registerNavigationRoute("/tutorials/react/randomuser/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
