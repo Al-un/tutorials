@@ -68,5 +68,6 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
-  ]
+  ],
+  "homepage": "https://al-un.github.io/tutorials/vue/test-project"
 }
