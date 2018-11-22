@@ -16,4 +16,5 @@ Here are some deployed tutorial applications:
 
 ## Angular
 
-1.  [Joke-caching](/tutorials/angular/joke-caching)
+1.  [Tour of heroes](/tutorials/angular/tour-of-heroes)
+2.  [Joke-caching](/tutorials/angular/joke-caching)
