@@ -1,0 +1,8 @@
+
+source: tutorial-website/src
+destination: tutorial-website/_site
+markdown: kramdown
+include: 
+  - tutorial-website/test/*
+  - ../relative/*
+  - ../relative/relative.html

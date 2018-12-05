@@ -11,3 +11,6 @@ node/*/node_modules/
 
 # ----- Ruby
 # handled at projects level
+
+# ----- Website
+tutorial-website/_site
