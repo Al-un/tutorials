@@ -1,0 +1,14 @@
+{
+  "main.css": "/tutorials/deploy/react/test-router/static/css/main.8debbea4.chunk.css",
+  "main.js": "/tutorials/deploy/react/test-router/static/js/main.50882533.chunk.js",
+  "main.js.map": "/tutorials/deploy/react/test-router/static/js/main.50882533.chunk.js.map",
+  "static/js/1.5410f45f.chunk.js": "/tutorials/deploy/react/test-router/static/js/1.5410f45f.chunk.js",
+  "static/js/1.5410f45f.chunk.js.map": "/tutorials/deploy/react/test-router/static/js/1.5410f45f.chunk.js.map",
+  "runtime~main.js": "/tutorials/deploy/react/test-router/static/js/runtime~main.6dcc7552.js",
+  "runtime~main.js.map": "/tutorials/deploy/react/test-router/static/js/runtime~main.6dcc7552.js.map",
+  "static/media/logo.svg": "/tutorials/deploy/react/test-router/static/media/logo.5d5d9eef.svg",
+  "static/css/main.8debbea4.chunk.css.map": "/tutorials/deploy/react/test-router/static/css/main.8debbea4.chunk.css.map",
+  "index.html": "/tutorials/deploy/react/test-router/index.html",
+  "precache-manifest.31e0d277ea9d57676b1dadc152dc2998.js": "/tutorials/deploy/react/test-router/precache-manifest.31e0d277ea9d57676b1dadc152dc2998.js",
+  "service-worker.js": "/tutorials/deploy/react/test-router/service-worker.js"
+}

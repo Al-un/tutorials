@@ -1,0 +1,16 @@
+body {
+  background-color: #212121;
+  color: #eaeaea; }
+
+#main-content {
+  max-width: 1000px;
+  width: 90%;
+  margin: auto; }
+  #main-content h1,
+  #main-content h2,
+  #main-content h3,
+  #main-content h4,
+  #main-content h5 {
+    color: #b5e853; }
+  #main-content a {
+    color: #63c0f5; }
