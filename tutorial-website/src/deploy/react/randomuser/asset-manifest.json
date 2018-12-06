@@ -1,0 +1,14 @@
+{
+  "main.css": "/tutorials/deploy/react/randomuser/static/css/main.8c198f9f.chunk.css",
+  "main.js": "/tutorials/deploy/react/randomuser/static/js/main.07f43b22.chunk.js",
+  "main.js.map": "/tutorials/deploy/react/randomuser/static/js/main.07f43b22.chunk.js.map",
+  "static/js/1.d855c10c.chunk.js": "/tutorials/deploy/react/randomuser/static/js/1.d855c10c.chunk.js",
+  "static/js/1.d855c10c.chunk.js.map": "/tutorials/deploy/react/randomuser/static/js/1.d855c10c.chunk.js.map",
+  "runtime~main.js": "/tutorials/deploy/react/randomuser/static/js/runtime~main.ebd93e33.js",
+  "runtime~main.js.map": "/tutorials/deploy/react/randomuser/static/js/runtime~main.ebd93e33.js.map",
+  "static/media/react_logo.svg": "/tutorials/deploy/react/randomuser/static/media/react_logo.5d5d9eef.svg",
+  "static/css/main.8c198f9f.chunk.css.map": "/tutorials/deploy/react/randomuser/static/css/main.8c198f9f.chunk.css.map",
+  "index.html": "/tutorials/deploy/react/randomuser/index.html",
+  "precache-manifest.df9840e3fba723927b9f99bcf01a6bcf.js": "/tutorials/deploy/react/randomuser/precache-manifest.df9840e3fba723927b9f99bcf01a6bcf.js",
+  "service-worker.js": "/tutorials/deploy/react/randomuser/service-worker.js"
+}

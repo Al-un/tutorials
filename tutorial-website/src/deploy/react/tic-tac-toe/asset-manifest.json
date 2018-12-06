@@ -1,0 +1,13 @@
+{
+  "main.css": "/tutorials/deploy/react/tic-tac-toe/static/css/main.d0e5a1fd.chunk.css",
+  "main.js": "/tutorials/deploy/react/tic-tac-toe/static/js/main.74946a10.chunk.js",
+  "main.js.map": "/tutorials/deploy/react/tic-tac-toe/static/js/main.74946a10.chunk.js.map",
+  "static/js/1.07861e9d.chunk.js": "/tutorials/deploy/react/tic-tac-toe/static/js/1.07861e9d.chunk.js",
+  "static/js/1.07861e9d.chunk.js.map": "/tutorials/deploy/react/tic-tac-toe/static/js/1.07861e9d.chunk.js.map",
+  "runtime~main.js": "/tutorials/deploy/react/tic-tac-toe/static/js/runtime~main.fa0157be.js",
+  "runtime~main.js.map": "/tutorials/deploy/react/tic-tac-toe/static/js/runtime~main.fa0157be.js.map",
+  "static/css/main.d0e5a1fd.chunk.css.map": "/tutorials/deploy/react/tic-tac-toe/static/css/main.d0e5a1fd.chunk.css.map",
+  "index.html": "/tutorials/deploy/react/tic-tac-toe/index.html",
+  "precache-manifest.a4aadead08333d946b57ac91073deadb.js": "/tutorials/deploy/react/tic-tac-toe/precache-manifest.a4aadead08333d946b57ac91073deadb.js",
+  "service-worker.js": "/tutorials/deploy/react/tic-tac-toe/service-worker.js"
+}
