@@ -1,0 +1,31 @@
+language: ruby
+rvm:
+  - 2.5.1
+cache:
+  directories:
+    - vendor/bundle
+
+env:
+  # $GITHUB_TOKEN
+  secure: "A9lWKGYDBobKzga43gyKG6cxQBkIdgBWusv7owIqx6a7wMMyz4hhzgMxl2iDq0wMBVMHI5q0B8u5BPAQewBCaTXU/bVey0KT5gmN0KxTd8ALwwY5jCghrU8lPIq0J55YwpHuUM0wGL2RT6neSQANYwUL10h+APB7Ren8ISpPwOueGmLwC9itcVkO+m8XvFGFCazWGuCNwKWZEiqzQWMoROVC2uLq6H/wNlvO4QJQRxGbaYTEluLev876dMWMHbGOIJzE2uYWT2a3xywZAUhs1yLIKS+4g0Gs0BC+NCZYApQnVRTBPgEfkopEdexMp6V2Ok3pwfsmjjwXfi7jypuWi0BsCk2zTqxf44D2iOWfQfsQovg+HayFmWrP4zgdoYl2778KxZBA2S40tDyTafgWa/1RmFel+y1PS6EdYPzZmjlUJ3YI0FHSH0wwnw6KGp8RMnJ/xOkVq7dVpCwWG3kilDnBbX/DGrPn8RoLhCHxA/xeG8B3+21iyhuyqQh4uRkrZRuJOk7JuLyJ7VnW3JJzFnQsRjN+IKtQBT8g7FvXX24R/EF9UM4feREj55wWzKfRjhvJqRSKCcSRZhGUH6Ngy2/gCkZ0el908fVohjkxloF8URk18OeCz1UKYwUYbmcWDUmbwq/GnGkjwaBA6WURH0kdNdTA+EElUbUw3GYeZ5M="
+
+install:
+  - bundle install --path vendor/bundle
+
+script:
+  - JEKYLL_ENV=production bundle exec jekyll build --baseurl tutorials/
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  local-dir: tutorial-website/_site
+  keep-history: true
+  verbose: true
+  on:
+    branch: master
+  # default values
+  target-branch: gh-pages
+
+notifications:
+  email: false
