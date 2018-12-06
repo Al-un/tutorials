@@ -52,4 +52,6 @@ jobs:
           name: Deploying Github page
           command: |
             chmod +x ./.circleci/deploy-ghpages.sh
-            ./.circleci/deploy-ghpages.sh tutorial-website/_site
+            # back to home directory
+            cd ~
+            ./.circleci/deploy-ghpages.sh ~/repo/tutorial-website/_site
