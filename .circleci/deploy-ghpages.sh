@@ -47,7 +47,7 @@ git commit --allow-empty -m "Deploy to GitHub pages"
 # and push, but send any output to /dev/null to hide anything sensitive
 echo "========== before git push"
 git branch
-git push https://${GH_TOKEN}@github.com/Al-un/tutorials.git gh-pages --force 
+git push https://${GH_TOKEN}@github.com/Al-un/tutorials.git gh-pages --force --quiet > /dev/null 2>&1
 # git push --force origin gh-pages > /dev/null 2>&1
 
 # go back to where we started and remove the gh-pages git repo we made and used
