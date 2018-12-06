@@ -8,16 +8,16 @@ Here are some deployed tutorial applications:
 
 ## React
 
-0.  [Test-project](/tutorials/react/test-project) from
+0.  [Test-project](/tutorials/deploy/react/test-project) from
     [this tutorial](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)
-1.  [Tic-tac-toe](/tutorials/react/tic-tac-toe) from
+1.  [Tic-tac-toe](/tutorials/deploy/react/tic-tac-toe) from
     [React tutorial](https://reactjs.org/tutorial/tutorial.html)
-2.  [Main concepts](/tutorials/react/main-concepts) from
+2.  [Main concepts](/tutorials/deploy/react/main-concepts) from
     [React main concepts](https://reactjs.org/docs/hello-world.html)
-3.  [Randomuser](/tutorials/react/randomuser) from repository
+3.  [Randomuser](/tutorials/deploy/react/randomuser) from repository
     (https://github.com/Al-un/tutorials/tree/master/react/3.randomuser)
-4.  [Router testing](/tutorials/react/test-router)
-6.  [Redux](/tutorials/react/redux)
+4.  [Router testing](/tutorials/deploy/react/test-router)
+6.  [Redux](/tutorials/deploy/react/redux)
 8.  [test Jest Enzyme](/tutorials/deploy/react/test-jest-enzyme)
 
 ## Angular
