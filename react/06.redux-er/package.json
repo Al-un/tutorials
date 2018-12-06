@@ -28,5 +28,5 @@
     "react-redux": "^5.1.1",
     "redux": "^4.0.1"
   },
-  "homepage": "https://al-un.github.io/tutorials/react/redux"
+  "homepage": "https://al-un.github.io/tutorials/deploy/react/redux"
 }

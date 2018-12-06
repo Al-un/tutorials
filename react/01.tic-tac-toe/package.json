@@ -22,5 +22,5 @@
     "not ie <= 11",
     "not op_mini all"
   ],
-  "homepage": "https://al-un.github.io/tutorials/react/tic-tac-toe/"
+  "homepage": "https://al-un.github.io/tutorials/deploy/react/tic-tac-toe/"
 }

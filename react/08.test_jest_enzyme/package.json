@@ -36,5 +36,6 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>/src/setupTests.js"
-  }
+  },
+  "homepage": "https://al-un.github.io/tutorials/deploy/react/test-jest-enzyme"
 }
