@@ -43,9 +43,8 @@ cp -a "../${siteSource}/." .
 # stage any changes and new files
 git add -A
 # now commit, ignoring branch gh-pages doesn't seem to work, so trying skip
-git commit --allow-empty -m "Deploy to GitHub pages"
+git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
 # and push, but send any output to /dev/null to hide anything sensitive
-echo "========== before git push"
 git branch
 git push https://${GH_TOKEN}@github.com/Al-un/tutorials.git gh-pages --force --quiet > /dev/null 2>&1
 # git push --force origin gh-pages > /dev/null 2>&1
