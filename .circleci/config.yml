@@ -32,16 +32,20 @@ jobs:
           key: tutorial-website-dependencies-{{ checksum "Gemfile.lock" }}
           paths:
             - ${BUNDLE_PATH}
+      - run: ls
       # Building
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
-      - persist_to_workspace:
-          root: ./
-          paths:
-            - tutorial-website/_site
+      - run: ls
+      # - persist_to_workspace:
+      #     root: ./
+      #     paths:
+      #       - tutorial-website/_site
       # Deploy
       # https://github.com/Villanuevand/deployment-circleci-gh-pages
       - run:
           name: Deploying Github page
-          command: ./.circleci/deploy-ghpages.sh tutorial-website/_site
+          commands: 
+            - chmod +x ./.circleci/deploy-ghpages.sh
+            - ./.circleci/deploy-ghpages.sh tutorial-website/_site
