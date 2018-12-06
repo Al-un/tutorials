@@ -32,18 +32,16 @@ jobs:
           key: tutorial-website-dependencies-v1-{{ checksum "Gemfile.lock" }}
           paths:
             -  ~/repo/vendor/bundle
-      - run: |
-        echo "before Jekyll build"
-        pwd
-        ls
+      - run: echo "before Jekyll build"
+      - run: pwd
+      - run: ls
       # Building
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
-      - run: |
-        echo "before GH deploy"
-        pwd
-        ls
+      - run: echo "before GH deploy"
+      - run: pwd
+      - run: ls
       # - persist_to_workspace:
       #     root: ./
       #     paths:
