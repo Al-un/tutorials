@@ -12,5 +12,8 @@ node/*/node_modules/
 # ----- Ruby
 # handled at projects level
 
-# ----- Website
+# ----- Jekyll Website
+# output
 tutorial-website/_site
+# sass cache
+.sass-cache
