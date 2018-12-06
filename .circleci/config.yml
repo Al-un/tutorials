@@ -23,15 +23,15 @@ jobs:
       # Dependencies
       - restore_cache:
           keys:
-            - tutorial-website-dependencies-{{ checksum "Gemfile.lock" }}
-            - tutorial-website-dependencies-
+            - tutorial-website-dependencies-v1-{{ checksum "Gemfile.lock" }}
+            - tutorial-website-dependencies-v1-
       - run:
           name: Bundle Install
           command: bundle check || bundle install
       - save_cache:
-          key: tutorial-website-dependencies-{{ checksum "Gemfile.lock" }}
+          key: tutorial-website-dependencies-v1-{{ checksum "Gemfile.lock" }}
           paths:
-            - ${BUNDLE_PATH}
+            -  ~/repo/vendor/bundle
       - run: ls
       # Building
       - run:
@@ -46,6 +46,6 @@ jobs:
       # https://github.com/Villanuevand/deployment-circleci-gh-pages
       - run:
           name: Deploying Github page
-          command: 
-            - chmod +x ./.circleci/deploy-ghpages.sh
-            - ./.circleci/deploy-ghpages.sh tutorial-website/_site
+          command: |
+            chmod +x ./.circleci/deploy-ghpages.sh
+            ./.circleci/deploy-ghpages.sh tutorial-website/_site
