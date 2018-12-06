@@ -41,10 +41,13 @@ fi
 cp -a "../${siteSource}/." .
 
 # stage any changes and new files
+echo "========== before git add"
 git add -A
 # now commit, ignoring branch gh-pages doesn't seem to work, so trying skip
+echo "========== before git commit"
 git commit --allow-empty -m "Deploy to GitHub pages [ci skip]"
 # and push, but send any output to /dev/null to hide anything sensitive
+echo "========== before git push"
 git push --force origin gh-pages > /dev/null 2>&1
 
 # go back to where we started and remove the gh-pages git repo we made and used
