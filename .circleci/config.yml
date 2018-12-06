@@ -5,6 +5,11 @@ version: 2
 defaults: &defaults
   working_directory: ~/repo
 
+general:
+  branches:
+    ignore:
+      - gh-pages
+
 jobs:
   # Building the website
   build:
@@ -35,3 +40,7 @@ jobs:
           root: ./
           paths:
             - tutorial-website/_site
+      # Deploy
+      - run:
+          name: Deploying Github page
+          command: ./circleci/deploy-ghpages.sh
