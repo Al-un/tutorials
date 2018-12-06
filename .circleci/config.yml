@@ -44,4 +44,4 @@ jobs:
       # https://github.com/Villanuevand/deployment-circleci-gh-pages
       - run:
           name: Deploying Github page
-          command: ./.circleci/deploy-ghpages.sh
+          command: ./.circleci/deploy-ghpages.sh tutorial-website/_site
