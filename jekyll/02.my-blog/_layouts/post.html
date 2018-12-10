@@ -1,0 +1,15 @@
+---
+layout: default
+---
+
+<h1>{{ page.title }}</h1>
+
+{{ content }}
+
+<hr />
+
+<div class="post-footer">
+  <div>{{ page.date | date_to_string }}</div>
+  <div>{{ page.tags | join: ', ' }}</div>
+  <div>{{ page.categories | join: ', ' }}</div>
+</div>

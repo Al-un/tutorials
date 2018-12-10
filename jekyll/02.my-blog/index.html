@@ -1,0 +1,40 @@
+---
+layout: default
+title: Home
+---
+
+<h1>My blog</h1>
+
+<ul>
+  {% for post in paginator.posts %}
+  <li>
+    <h4>
+      <a href="{{post.url}}">{{ post.date | date_to_string}} | {{ post.title }}</a>
+    </h4>
+    <p>{{ post.excerpt }}</p>
+  </li>
+  {% endfor %}
+</ul>
+<div>
+    {% if paginator.previous_page_path %}
+    <a href="{{paginator.previous_page_path}}">Prev</a>
+    {% endif %}
+
+    {{paginator.page}} / {{paginator.total_pages}}
+
+    {% if paginator.next_page_path %}
+    <a href="{{paginator.next_page_path}}">Next</a>
+    {% endif %}
+</div>
+<div>
+    <ul>
+        <li>paginator.page: {{paginator.page}}</li>
+        <li>paginator.per_page: {{paginator.per_page}}</li>
+        <li>paginator.total_posts: {{paginator.total_posts}}</li>
+        <li>paginator.total_pages: {{paginator.total_pages}}</li>
+        <li>paginator.previous_page: {{paginator.previous_page}}</li>
+        <li>paginator.previous_page_path: {{paginator.previous_page_path}}</li>
+        <li>paginator.next_page: {{paginator.next_page}}</li>
+        <li>paginator.next_page_path: {{paginator.next_page_path}}</li>
+    </ul>
+</div>

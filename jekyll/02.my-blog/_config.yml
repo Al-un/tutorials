@@ -1,0 +1,25 @@
+# Folder structure
+# default value
+source: .
+# default value
+destination: _site
+
+# Markdown
+markdown: kramdown
+
+# Collections
+
+# Default front matters
+defaults:
+  - scope:
+      path: _posts
+      type: posts
+    values:
+      layout: post
+
+# Pagination
+paginate: 5
+
+# Plugins (formerly `gems`)
+plugins:
+  - jekyll-paginate
