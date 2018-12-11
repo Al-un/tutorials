@@ -1,19 +1,17 @@
 # CircleCI 2.0
 version: 2
 
-# Default config shared by all jobs
-defaults: &defaults
-  working_directory: ~/repo
-
-general:
-  branches:
-    ignore:
-      - gh-pages
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build
+      - deploy
 
 jobs:
   # Building the website
   build:
-    <<: *defaults
+    working_directory: ~/repo
     docker:
       - image: circleci/ruby:2.5
     environment:
@@ -32,24 +30,27 @@ jobs:
           key: tutorial-website-dependencies-v1-{{ checksum "Gemfile.lock" }}
           paths:
             -  ~/repo/vendor/bundle
-      - run: echo "before Jekyll build"
-      - run: pwd
-      - run: ls
       # Building
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
-      - run: echo "before GH deploy"
+      - persist_to_workspace:
+          root: ~/artifacts
+          paths:
+            - tutorial-website/_site
+
+  deploy:
+    working_directory: ~/
+    machine: 
+      enabled: true
+    steps:
       - run: pwd
       - run: ls
-      # - persist_to_workspace:
-      #     root: ./
-      #     paths:
-      #       - tutorial-website/_site
-      # Deploy
-      # https://github.com/Villanuevand/deployment-circleci-gh-pages
-      - run:
-          name: Deploying Github page
-          command: |
-            chmod +x ~/repo/.circleci/deploy-ghpages.sh
-            ~/repo/.circleci/deploy-ghpages.sh tutorial-website/_site
+      - run: ls ~/artifacts
+      # # Deploy
+      # # https://github.com/Villanuevand/deployment-circleci-gh-pages
+      # - run:
+      #     name: Deploying Github page
+      #     command: |
+      #       chmod +x ~/repo/.circleci/deploy-ghpages.sh
+      #       ~/repo/.circleci/deploy-ghpages.sh tutorial-website/_site
