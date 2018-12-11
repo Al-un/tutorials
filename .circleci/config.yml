@@ -53,12 +53,12 @@ jobs:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: ~/repo/
-      - run:
-          - ls
-          - ls ~
-          - ls ~/repo/tutorial-website
-          - ls ~/repo/tutorial-website/_site
-          - ls ~/repo/.circle-ci
+      - run: | 
+          ls
+          ls ~
+          ls ~/repo/tutorial-website
+          ls ~/repo/tutorial-website/_site
+          ls ~/repo/.circle-ci
       # # Deploy
       # # https://github.com/Villanuevand/deployment-circleci-gh-pages
       # - run:
