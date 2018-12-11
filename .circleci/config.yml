@@ -50,6 +50,7 @@ jobs:
           paths:
             - tutorial-website/_site
             - circleci_scripts
+      - run: ls
 
   deploy:
     working_directory: ~/
