@@ -46,6 +46,7 @@ jobs:
     machine: 
       enabled: true
     steps:
+      - checkout
       - run: pwd
       - run: ls
       # - run: ls ~/artifacts
