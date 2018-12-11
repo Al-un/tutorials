@@ -13,11 +13,11 @@ workflows:
 jobs:
   # Building the website
   build:
-    working_directory: /tmp/repo/
+    working_directory: ~/repo/
     docker:
       - image: circleci/ruby:2.5
     environment:
-      BUNDLE_PATH: repo/vendor/bundle
+      BUNDLE_PATH: ~/repo/vendor/bundle
     steps:
       - checkout
       # Dependencies
@@ -31,14 +31,15 @@ jobs:
       - save_cache:
           key: tutorial-website-dependencies-v1-{{ checksum "Gemfile.lock" }}
           paths:
-            -  repo/vendor/bundle
+            -  ~/repo/vendor/bundle
       # Building
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
       - persist_to_workspace:
-          # Must be an absolute path, or relative path from working_directory. This is a directory on the container which is 
-          # taken to be the root directory of the workspace.
+          # Must be an absolute path, or relative path from working_directory.
+          # This is a directory on the container which is  taken to be the root
+          # directory of the workspace.
           root: tutorial-website
           paths:
             - _site
@@ -49,18 +50,18 @@ jobs:
       - run: ls tutorial-website/_site
 
   deploy:
-    working_directory: /tmp
+    working_directory: ~/
     docker:
       - image: buildpack-deps:trusty
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: /tmp/repo/tutorial-website
+          at: ~/repo/tutorial-website
       - run: pwd
       - run: ls
-      - run: ls /tmp/repo
-      - run: ls /tmp/repo/tutorial-website
-      - run: ls /tmp/repo/tutorial-website/_site
+      - run: ls ~/repo
+      - run: ls ~/repo/tutorial-website
+      - run: ls ~/repo/tutorial-website/_site
       # - run: ls ~/artifacts
       # # Deploy
       # # https://github.com/Villanuevand/deployment-circleci-gh-pages
