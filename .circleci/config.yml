@@ -43,7 +43,7 @@ jobs:
           root: ./
           paths:
             - tutorial-website/_site
-            - .circleci/deploy-ghpages.sh
+            - .circleci/
 
   deploy:
     working_directory: ~/
