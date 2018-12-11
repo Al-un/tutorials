@@ -50,7 +50,6 @@ jobs:
           paths:
             - tutorial-website/_site
             - circleci_scripts
-      - run: ls
 
   deploy:
     working_directory: ~/
@@ -60,16 +59,13 @@ jobs:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: ~/repo/
-      - run: ls
-      - run: ls ~
-      - run: ls ~/repo/
-      - run: ls ~/repo/tutorial-website
+      # Ensure content is property copied
       - run: ls ~/repo/tutorial-website/_site
       - run: ls ~/repo/circleci_scripts
-      # # Deploy
-      # # https://github.com/Villanuevand/deployment-circleci-gh-pages
-      # - run:
-      #     name: Deploying Github page
-      #     command: |
-      #       chmod +x ~/repo/.circleci/deploy-ghpages.sh
-      #       ~/repo/.circleci/deploy-ghpages.sh tutorial-website/_site
+      # Deploy
+      # https://github.com/Villanuevand/deployment-circleci-gh-pages
+      - run:
+          name: Deploying Github page
+          command: |
+            chmod +x ~/repo/circleci_scripts/deploy-ghpages.sh
+            ~/repo/circleci_scripts/deploy-ghpages.sh  ~/repo/tutorial-website/_site
