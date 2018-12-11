@@ -21,7 +21,7 @@ This is a training for a blog-like static site. Main features are:
 
 - {{ tag[0] }} - {{ tag[1].size }} items
     {% for post in tag[1] %}
-    - [{{ post.title }}]({{ post.url }})
+    - [{{ post.title }}]({{ post.url | relative_url }})
     {% endfor %}
   {% endfor %}
 
@@ -31,7 +31,7 @@ This is a training for a blog-like static site. Main features are:
 
 - {{ category[0] }}
     {% for post in category[1] %}
-    - [{{ post.title }}]({{ post.url }})
+    - [{{ post.title }}]({{ post.url | relative_url }})
     {% endfor %}
   {% endfor %}
 

@@ -8,24 +8,28 @@ Here are some deployed tutorial applications:
 
 ## React
 
-0.  [Test-project](/tutorials/deploy/react/test-project) from
+00.  [Test-project](/tutorials/deploy/react/test-project) from
     [this tutorial](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)
-1.  [Tic-tac-toe](/tutorials/deploy/react/tic-tac-toe) from
+01.  [Tic-tac-toe](/tutorials/deploy/react/tic-tac-toe) from
     [React tutorial](https://reactjs.org/tutorial/tutorial.html)
-2.  [Main concepts](/tutorials/deploy/react/main-concepts) from
+02.  [Main concepts](/tutorials/deploy/react/main-concepts) from
     [React main concepts](https://reactjs.org/docs/hello-world.html)
-3.  [Randomuser](/tutorials/deploy/react/randomuser) from repository
+03.  [Randomuser](/tutorials/deploy/react/randomuser) from repository
     (https://github.com/Al-un/tutorials/tree/master/react/3.randomuser)
-4.  [Router testing](/tutorials/deploy/react/test-router)
-6.  [Redux](/tutorials/deploy/react/redux)
-8.  [test Jest Enzyme](/tutorials/deploy/react/test-jest-enzyme)
+04.  [Router testing](/tutorials/deploy/react/test-router)
+06.  [Redux](/tutorials/deploy/react/redux)
+08.  [test Jest Enzyme](/tutorials/deploy/react/test-jest-enzyme)
 
 ## Angular
 
-1.  [Tour of heroes](/tutorials/deploy/angular/tour-of-heroes)
-2.  [Joke-caching](/tutorials/deploy/angular/joke-caching)
+01.  [Tour of heroes](/tutorials/deploy/angular/tour-of-heroes)
+02.  [Joke-caching](/tutorials/deploy/angular/joke-caching)
 
 ## Vue
 
-1. [Test-project](/tutorials/deploy/vue/test-project)
+01. [Test-project](/tutorials/deploy/vue/test-project)
 
+## Jekyll
+
+01. [my-site](/tutorials/deploy/jekyll/my-site) Jekyll basic tutorial
+02. [my-blog](/tutotials/deploy/jekyll/my-blog) Testing Jekyll blogging stuff
