@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+  <head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+
+  <title>My blog</title>
+
+  <link rel="stylesheet" href="/tutorials/deploy/jekyll/my-blog/assets/styles/main.css" />
+  <link rel="icon" type="image/x-icon" href="/tutorials/deploy/jekyll/my-blog/favicon.ico"  />
+  <link
+    rel="stylesheet"
+    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
+    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+    crossorigin="anonymous"
+  />
+</head>
+
+
+  <body>
+    <header>
+  <a href="/tutorials/deploy/jekyll/my-blog/" class="nav-to-home">
+    <span class="fas fa-home"></span> <span>Home</span>
+  </a>
+  <div>This is my blog header</div>
+</header>
+
+
+    <div id="main-container">
+      <div id="main-content"><h1 id="objectives">Objectives</h1>
+
+<p>This is a training for a blog-like static site. Main features are:</p>
+
+<ul class="task-list">
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />display posts</li>
+  <li class="task-list-item"><input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />paginate posts (<code class="highlighter-rouge">jekyll-paginate</code> require <code class="highlighter-rouge">index.html</code> pages)
+    <ul>
+      <li>https://jekyllrb.com/docs/pagination/</li>
+      <li>https://teamtreehouse.com/community/jekyllpaginate-gem (<code class="highlighter-rouge">gems</code> is now
+<code class="highlighter-rouge">plugins</code> in <code class="highlighter-rouge">_config.yml</code>)</li>
+    </ul>
+  </li>
+  <li class="task-list-item">[ ]search posts (by tags/categories and then by content)
+    <ul>
+      <li>tags and stuff: https://jekyllrb.com/docs/posts/</li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="tags">Tags</h3>
+
+<ul>
+  <li>
+    <p>early - 1 items</p>
+
+    <ul>
+      <li><a href="/tutorials/deploy/jekyll/my-blog/cat1/cat5/2018/10/01/before.html">The beginning…</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>story - 4 items</p>
+
+    <ul>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/2018/11/08/pouet.html">Post title</a></p>
+      </li>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/2018/11/07/entry-bis.html">Post title</a></p>
+      </li>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/cat3/2018/11/04/entry.html">Post title</a></p>
+      </li>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/cat3/2018/11/01/welcome.html">Welcome!!</a></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>food - 3 items</p>
+
+    <ul>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/2018/11/07/entry.html">Post title</a></p>
+      </li>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/2018/11/06/entry.html">Post title</a></p>
+      </li>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/cat5/2018/11/05/entry.html">Post title</a></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>ice cream - 1 items</p>
+
+    <ul>
+      <li><a href="/tutorials/deploy/jekyll/my-blog/cat5/2018/11/05/entry.html">Post title</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>cake - 1 items</p>
+
+    <ul>
+      <li><a href="/tutorials/deploy/jekyll/my-blog/2018/11/06/entry.html">Post title</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>pasta - 1 items</p>
+
+    <ul>
+      <li><a href="/tutorials/deploy/jekyll/my-blog/2018/11/07/entry.html">Post title</a></li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="categories">Categories</h3>
+
+<ul>
+  <li>
+    <p>cat1</p>
+
+    <ul>
+      <li><a href="/tutorials/deploy/jekyll/my-blog/cat1/cat5/2018/10/01/before.html">The beginning…</a></li>
+    </ul>
+  </li>
+  <li>
+    <p>cat5</p>
+
+    <ul>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/cat5/2018/11/05/entry.html">Post title</a></p>
+      </li>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/cat1/cat5/2018/10/01/before.html">The beginning…</a></p>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <p>cat3</p>
+
+    <ul>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/cat3/2018/11/04/entry.html">Post title</a></p>
+      </li>
+      <li>
+        <p><a href="/tutorials/deploy/jekyll/my-blog/cat3/2018/11/01/welcome.html">Welcome!!</a></p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h3 id="misc">Misc</h3>
+<ul>
+  <li><a href="https://stackoverflow.com/questions/34242743/distinct-list-of-tags-in-jekyll">Join tags &amp; categories</a></li>
+</ul>
+</div>
+    </div>
+
+    <footer>
+  <div><a href="/tutorials/deploy/jekyll/my-blog/about">About</a></div>
+  <div>This is my blog footer</div>
+</footer>
+
+  </body>
+</html>
