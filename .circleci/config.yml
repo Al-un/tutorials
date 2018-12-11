@@ -35,8 +35,9 @@ jobs:
           name: Jekyll build
           command: bundle exec jekyll build
       - run: mkdir ~/artifacts
+      - run: cd ~
       - persist_to_workspace:
-          root: ~/
+          root: ./
           paths:
             - tutorial-website/_site
       - run: pwd
