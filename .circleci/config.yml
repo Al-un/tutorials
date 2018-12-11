@@ -44,7 +44,7 @@ jobs:
           paths:
             - tutorial-website/_site
             - .circleci/deploy-ghpages.sh
-            
+
   deploy:
     working_directory: ~/
     docker:
@@ -52,7 +52,13 @@ jobs:
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
-          at: ~/repo/tutorial-website
+          at: ~/repo/
+      - run:
+          - ls
+          - ls ~
+          - ls ~/repo/tutorial-website
+          - ls ~/repo/tutorial-website/_site
+          - ls ~/repo/.circle-ci
       # # Deploy
       # # https://github.com/Villanuevand/deployment-circleci-gh-pages
       # - run:
