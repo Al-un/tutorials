@@ -62,9 +62,10 @@ jobs:
           at: ~/repo/
       - run: ls
       - run: ls ~
+      - run: ls ~/repo/
       - run: ls ~/repo/tutorial-website
       - run: ls ~/repo/tutorial-website/_site
-      - run: ls ~/repo/.circle-ci
+      - run: ls ~/repo/circleci_scripts
       # # Deploy
       # # https://github.com/Villanuevand/deployment-circleci-gh-pages
       # - run:
