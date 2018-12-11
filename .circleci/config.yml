@@ -36,7 +36,12 @@ jobs:
       - run:
           name: Jekyll build
           command: bundle exec jekyll build
-      - run: ls
+      # Save script for deployment
+      - run:
+          name: Saving deployment scripts
+          command: |
+            mkdir circleci_scripts
+            cp ~/repo/.circleci/deploy-ghpages.sh circleci_scripts/deploy-ghpages.sh
       - persist_to_workspace:
           # Must be an absolute path, or relative path from working_directory.
           # This is a directory on the container which is  taken to be the root
@@ -44,7 +49,7 @@ jobs:
           root: ./
           paths:
             - tutorial-website/_site
-            - .circleci
+            - circleci_scripts
 
   deploy:
     working_directory: ~/
