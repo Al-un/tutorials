@@ -46,8 +46,8 @@ jobs:
 
   deploy:
     working_directory: ~/
-    machine: 
-      enabled: true
+    docker:
+      - image: buildpack-deps:trusty
     steps:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
