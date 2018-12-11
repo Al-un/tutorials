@@ -35,11 +35,14 @@ jobs:
           name: Jekyll build
           command: bundle exec jekyll build
       - persist_to_workspace:
-          root: ./
+          root: ~/repo
           paths:
             - tutorial-website/_site
       - run: pwd
       - run: ls
+      - run: ls ~
+      - run: ls tutorial-website
+      - run: ls tutorial-website/_site
 
   deploy:
     working_directory: ~/
@@ -52,6 +55,7 @@ jobs:
       - run: pwd
       - run: ls
       - run: ls ~/repo
+      - run: ls ~/repo/tutorial-website
       - run: ls ~/repo/tutorial-website/_site
       # - run: ls ~/artifacts
       # # Deploy
