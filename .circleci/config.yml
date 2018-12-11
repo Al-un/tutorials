@@ -39,6 +39,8 @@ jobs:
           root: ~/
           paths:
             - tutorial-website/_site
+      - run: pwd
+      - run: ls
 
   deploy:
     working_directory: ~/
