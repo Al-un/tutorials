@@ -40,15 +40,11 @@ jobs:
           # Must be an absolute path, or relative path from working_directory.
           # This is a directory on the container which is  taken to be the root
           # directory of the workspace.
-          root: tutorial-website
+          root: ./
           paths:
-            - _site
-      - run: pwd
-      - run: ls
-      - run: ls ~
-      - run: ls tutorial-website
-      - run: ls tutorial-website/_site
-
+            - tutorial-website/_site
+            - .circleci/deploy-ghpages.sh
+            
   deploy:
     working_directory: ~/
     docker:
@@ -57,12 +53,6 @@ jobs:
       - attach_workspace:
           # Must be absolute path or relative path from working_directory
           at: ~/repo/tutorial-website
-      - run: pwd
-      - run: ls
-      - run: ls ~/repo
-      - run: ls ~/repo/tutorial-website
-      - run: ls ~/repo/tutorial-website/_site
-      # - run: ls ~/artifacts
       # # Deploy
       # # https://github.com/Villanuevand/deployment-circleci-gh-pages
       # - run:
