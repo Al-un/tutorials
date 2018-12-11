@@ -7,8 +7,10 @@ set -e
 # show where we are on the machine
 pwd
 
-remote=$(git config remote.origin.url)
+# remote=$(git config remote.origin.url)
+remote="https://github.com/Al-un/tutorials.git"
 
+# Tutorial specific: siteSource must be absolute paths!!!!
 siteSource="$1"
 
 if [ ! -d "$siteSource" ]
@@ -38,7 +40,7 @@ else
 fi
 
 # copy over or recompile the new site
-cp -a "../${siteSource}/." .
+cp -a "${siteSource}/." .
 
 # stage any changes and new files
 git add -A
