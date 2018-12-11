@@ -32,4 +32,4 @@ Here are some deployed tutorial applications:
 ## Jekyll
 
 01. [my-site](/tutorials/deploy/jekyll/my-site) Jekyll basic tutorial
-02. [my-blog](/tutotials/deploy/jekyll/my-blog) Testing Jekyll blogging stuff
+02. [my-blog](/tutorials/deploy/jekyll/my-blog) Testing Jekyll blogging stuff
