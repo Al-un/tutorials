@@ -35,7 +35,7 @@ jobs:
           name: Jekyll build
           command: bundle exec jekyll build
       - persist_to_workspace:
-          root: ~/repo
+          root: ./
           paths:
             - tutorial-website/_site
       - run: pwd
@@ -46,7 +46,9 @@ jobs:
     machine: 
       enabled: true
     steps:
-      - checkout
+      - attach_workspace:
+          # Must be absolute path or relative path from working_directory
+          at: ~/repo
       - run: pwd
       - run: ls
       # - run: ls ~/artifacts
