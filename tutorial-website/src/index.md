@@ -28,6 +28,7 @@ Here are some deployed tutorial applications:
 ## Vue
 
 01. [Test-project](/tutorials/deploy/vue/test-project)
+02. [Coursetro](/tutorials/deploy/vue/coursetro)
 
 ## Jekyll
 
