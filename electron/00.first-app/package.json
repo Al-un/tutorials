@@ -1,0 +1,10 @@
+{
+  "name": "first-app",
+  "version": "1.0.0",
+  "description": "first app tutorial",
+  "main": "main.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron ."
+  }
+}
