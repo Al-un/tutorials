@@ -5,3 +5,7 @@ destination: tutorial-website/_site
 
 # Markdown
 markdown: kramdown
+
+# Serving
+port: 3000
+host: localhost

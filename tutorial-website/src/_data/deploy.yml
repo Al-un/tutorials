@@ -1,0 +1,50 @@
+- name: React
+  folder: react
+  deployments:
+    - name: Test-project
+      folder: test-project
+      desc: from [this tutorial](https://scotch.io/tutorials/learning-react-getting-started-and-concepts)
+    - name: Tic-tac-toe
+      folder: tic-tac-toe
+      desc: from [React tutorial](https://reactjs.org/tutorial/tutorial.html)
+    - name: Main concepts
+      folder: main-concepts
+      desc: from [React main concepts](https://reactjs.org/docs/hello-world.html)
+    - name: Randomuser
+      folder: randomuser
+      desc: from [repository](https://github.com/Al-un/tutorials/tree/master/react/3.randomuser)
+    - name: Router testing
+      folder: test-router
+    - name: Redux
+      folder: redux
+    - name: test Jest Enzyme
+      folder: test-jest-enzyme
+
+- name: Angular
+  folder: angular
+  deployments:
+    - name: Tour of heroes
+      folder: tour-of-heroes
+    - name: Joke-caching
+      folder: joke-caching
+      desc: Some jokes...
+
+- name: Vue.js
+  folder: vue
+  deployments:
+    - name: Test project
+      folder: test-project
+    - name: Coursetro
+      folder: coursetro
+    - name: Vuex
+      folder: vuex
+
+- name: Jekyll
+  folder: jekyll
+  deployments:
+    - name: my-site
+      folder: my-site
+      desc: Jekyll basic tutorial
+    - name: my-blog
+      folder: my-blog
+      desc: Testing Jekyll blogging stuff
