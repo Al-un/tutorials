@@ -1,0 +1,11 @@
+@font-face {
+    font-family: 'Pouet';
+    src: url('./NotoSans-Regular.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+.hello {
+    color: red;
+    font-family: 'Pouet';
+}

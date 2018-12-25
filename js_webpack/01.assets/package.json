@@ -1,0 +1,21 @@
+{
+  "name": "getting-started",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "dependencies": {
+    "lodash": "^4.17.11"
+  },
+  "devDependencies": {
+    "css-loader": "^2.0.2",
+    "csv-loader": "^3.0.2",
+    "file-loader": "^3.0.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.28.2",
+    "webpack-cli": "^3.1.2",
+    "xml-loader": "^1.2.1"
+  },
+  "scripts": {
+    "build": "npx webpack --config webpack.config.js --mode development"
+  }
+}
