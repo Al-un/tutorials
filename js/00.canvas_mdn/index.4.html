@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Canvas tutorial</title>
+    <script type="text/javascript">
+      function draw() {
+        let ctx = document.getElementById('tutorial').getContext('2d');
+        ctx.font = '48px serif';
+        // ctx.fillText('Hello world', 10, 50);
+        ctx.strokeText('Hello world', 10, 50);
+      }
+    </script>
+    <style type="text/css">
+      canvas {
+        border: 1px solid darkcyan;
+      }
+    </style>
+  </head>
+
+  <body onload="draw();">
+    <canvas id="tutorial"></canvas>
+  </body>
+</html>
