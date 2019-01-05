@@ -17,3 +17,7 @@ node/*/node_modules/
 tutorial-website/_site
 # sass cache
 .sass-cache
+
+# Misc
+plop.*
+pouet.*
