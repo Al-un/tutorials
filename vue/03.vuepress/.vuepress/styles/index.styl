@@ -1,0 +1,28 @@
+// Override stuff
+body
+    background-color: #2f454f !important
+    min-height: 100vh
+
+header.navbar
+    background-color: #186e82 !important
+    // Overrides:
+    //  div.links
+    //  ul.nav-dropdown
+    div, ul
+        background-color: #186e82 !important
+
+.sidebar
+    background-color: #2f454f !important
+
+.custom-block
+    &.tip
+        background-color: #798d96 !important
+    &.warning  
+        background-color: #ffe564 !important
+
+
+// Hack for vocaloid icon
+img[src*="#voca-icon"]
+    width: 250px
+    display: block
+    margin: auto

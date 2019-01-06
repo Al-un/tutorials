@@ -1,0 +1,16 @@
+{
+  "name": "vuepress-tutorial",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@vuepress/plugin-pwa": "^1.0.0-alpha.0",
+    "sass-loader": "^7.1.0",
+    "vuepress": "^1.0.0-alpha.30"
+  },
+  "scripts": {
+    "serve": "vuepress dev --port 3000",
+    "build": "vuepress build"
+  },
+  "dependencies": {}
+}
