@@ -3,7 +3,7 @@
 
 module.exports = {
   // Build
-  base: '/tutorials/deploy/vue/vuepress',
+  base: '/tutorials/deploy/vue/vuepress/',
   // base: '/',
   dest: 'dist/',
   // Locales
