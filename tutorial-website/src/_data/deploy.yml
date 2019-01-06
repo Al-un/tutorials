@@ -38,6 +38,9 @@
       folder: coursetro
     - name: Vuex
       folder: vuex
+    - name: Vuepress
+      desc: Test of static website framework powered by Vue.js, [VuePress](https://vuepress.vuejs.org/guide/)
+      folder: vuepress
 
 - name: Jekyll
   folder: jekyll
