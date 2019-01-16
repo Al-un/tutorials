@@ -4,6 +4,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class ArsComponentsService {
+  constructor() {}
 
-  constructor() { }
+  get pouet(): String {
+    return 'ArsComponentsService';
+  }
 }

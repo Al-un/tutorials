@@ -1,0 +1,3 @@
+interface DummyClient {
+  pouet: () => String;
+}
