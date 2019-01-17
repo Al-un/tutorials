@@ -3,12 +3,11 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ArsComponentsModule } from 'ars-components';
-import { AwsGatewayService } from './aws-gateway.service';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [BrowserModule, ArsComponentsModule],
-  providers: [AwsGatewayService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {}

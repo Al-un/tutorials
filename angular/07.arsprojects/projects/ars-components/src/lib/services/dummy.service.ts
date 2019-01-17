@@ -1,15 +1,16 @@
 import { Injectable } from '@angular/core';
-import { Animal } from '../model/animal';
+import { Pet } from '../model/pet';
 
 // const dummyLibrary = require('./dummy.library.js');
-declare var apigClientFactory: ApiClientFactory;
+declare var apigClientFactory: any;
 
 @Injectable({
   providedIn: 'root'
 })
 export class DummyService {
   // dummyClient: DummyClient;
-  public client: ApiClient;
+  public client: any;
+  public loadedPets: Array<Pet>;
 
   constructor() {
     // this.dummyClient = dummyLibrary.newClient();
@@ -26,21 +27,15 @@ export class DummyService {
     return 'some text and pouet!';
   }
 
-  get otherText(): String {
-    return 'some pouet other text';
-  }
-
-  get animal(): Animal {
-    const animal = new Animal();
-    animal.name = 'Toto';
-    animal.type = 'dog';
-    return animal;
-  }
-
-  public load(): void {
-    console.log('Loading pets');
-    this.client
-      .petsGet({ page: 1, type: 'cat' }, {})
-      .then(resp => console.log(resp));
+  /**
+   * Load asynchronous pets from AWS API Gateway
+   * @param page page index. Default: 1
+   * @param type pets type. Default "dog"
+   */
+  public async loadPets(page = 1, type = 'dog'): Promise<Array<Pet>> {
+    const resp = await this.client.petsGet({ page: page, type: type });
+    console.log(`Async loaded type ${type} page ${page}:`, resp);
+    const data = await resp.data;
+    return data;
   }
 }

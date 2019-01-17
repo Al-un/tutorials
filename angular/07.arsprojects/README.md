@@ -1,6 +1,7 @@
 # Arsprojects
 
 Tutorial about library + applications project: https://medium.com/@SirMaxxx/angular-6-creating-a-shareable-control-library-6a27f0ebe5c2
+Combined with AWS API Gateway
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.7.
 

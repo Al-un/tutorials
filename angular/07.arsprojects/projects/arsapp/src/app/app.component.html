@@ -8,5 +8,13 @@
 
 <ars-plop></ars-plop>
 
+<hr />
+
 <p>LocalContent: {{ localContent }}</p>
-<p>ArsContent: {{ arsContent }}</p>
+
+<p *ngIf="!pets">Pets are loading</p>
+<div *ngFor="let pet of pets" style="border: 1px solid darkcyan;">
+  <p>Id: {{ pet.id }}</p>
+  <p>Type: {{ pet.type }}</p>
+  <p>Price: {{ pet.price }}</p>
+</div>

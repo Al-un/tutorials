@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DummyService, ArsComponentsService } from 'ars-components';
-import { AwsGatewayService } from './aws-gateway.service';
+import { DummyService, Pet } from 'ars-components';
 
 @Component({
   selector: 'app-root',
@@ -10,22 +9,14 @@ import { AwsGatewayService } from './aws-gateway.service';
 export class AppComponent implements OnInit {
   title = 'app';
   localContent: String;
-  arsContent: String;
   awsContent: any;
-  pets: any;
+  pets: Array<Pet> = undefined;
 
-  constructor(
-    private dummyService: DummyService,
-    private arsService: ArsComponentsService,
-    private awsService: AwsGatewayService
-  ) {
-    this.localContent = this.dummyService.otherText;
-    this.arsContent = this.arsService.pouet;
-    this.awsContent = this.awsService.pouet;
+  constructor(private dummyService: DummyService) {
+    this.localContent = this.dummyService.someText;
   }
 
   ngOnInit() {
-    this.awsService.loadPets();
-    this.dummyService.load();
+    this.dummyService.loadPets().then(data => (this.pets = data));
   }
 }
