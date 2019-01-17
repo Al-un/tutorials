@@ -47,7 +47,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "src/assets/lib/dummy.library.js"
+            ]
           },
           "configurations": {
             "production": {
