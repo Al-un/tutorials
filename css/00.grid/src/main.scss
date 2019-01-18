@@ -1,0 +1,59 @@
+/* Variable */
+
+$miku: (
+  black: #373b3e,
+  grey: #bec8d1,
+  teal-light: #86cecb,
+  teal-dark: #137a7f,
+  red: #e12885
+);
+/* Mixins */
+
+@mixin lt-md {
+  @media (max-width: 767px) {
+    @content;
+  }
+}
+
+@mixin gt-md {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+/* Basic layout */
+
+body {
+  background-color: map-get($miku, grey);
+  color: map-get($miku, black);
+}
+
+.container {
+  width: 98%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Grid */
+
+.grid-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  @include gt-md{
+      max-height: 900px;
+  }
+}
+
+.grid-item {
+  width: 333px;
+  max-width: 100%;
+  padding: 0.5rem;
+  box-sizing: border-box;
+  & > div {
+    background-color: map-get($miku, teal-light);
+    box-sizing: border-box;
+    padding: 1rem;
+    border: 1px solid map-get($miku, red);
+  }
+}
