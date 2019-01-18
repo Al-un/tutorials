@@ -7,7 +7,7 @@
 # N/A
 
 # ----- NodeJS
-node/*/node_modules/
+node_modules/
 
 # ----- Ruby
 # handled at projects level
