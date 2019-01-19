@@ -1,6 +1,8 @@
 # Stuff
 misc.md
 
-# G stuff
+# Go stuff
+bin/
+pkg/
 src/github.com/
 src/golang.org/
