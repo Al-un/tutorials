@@ -1,0 +1,1 @@
+{"version":3,"file":"main.a4002baefb9e3a067f60.bundle.js","sources":["webpack:///./src/components/Pouet.js"],"sourcesContent":["import React from 'react';\r\n\r\nexport default function Pouet(props) {\r\n  return (\r\n    <div>\r\n      <h1>{props.title || 'no title given'}</h1>\r\n      <p>Pouet text</p>\r\n    </div>\r\n  );\r\n}\r\n"],"mappings":"AAAA","sourceRoot":""}
