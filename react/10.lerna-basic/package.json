@@ -1,0 +1,12 @@
+{
+  "name": "lerna",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "lerna": "^3.10.6"
+  },
+  "scripts": {
+    "lerna": "lerna"
+  }
+}
