@@ -1,7 +1,18 @@
 import { Injectable } from '@angular/core';
 import { Pet } from '../model/pet';
 
-// const dummyLibrary = require('./dummy.library.js');
+// import './aws-api/lib/axios/dist/axios.standalone.js';
+// import './aws-api/lib/CryptoJS/rollups/hmac-sha256.js';
+// import './aws-api/lib/CryptoJS/rollups/sha256.js';
+// import './aws-api/lib/CryptoJS/components/hmac.js';
+// import './aws-api/lib/CryptoJS/components/enc-base64.js';
+// import './aws-api/lib/url-template/url-template.js';
+// import './aws-api/lib/apiGatewayCore/sigV4Client.js';
+// import './aws-api/lib/apiGatewayCore/apiGatewayClient.js';
+// import './aws-api/lib/apiGatewayCore/simpleHttpClient.js';
+// import './aws-api/lib/apiGatewayCore/utils.js';
+// import 'aws-api/apigClient.js';
+
 declare var apigClientFactory: any;
 
 @Injectable({
@@ -15,7 +26,10 @@ export class DummyService {
   constructor() {
     // this.dummyClient = dummyLibrary.newClient();
     // console.log(dummyLibrary);
-    if (apigClientFactory) {
+    if (
+      typeof apigClientFactory !== 'undefined' &&
+      apigClientFactory !== null
+    ) {
       console.log('API Gateway IS defined');
       this.client = apigClientFactory.newClient({});
     } else {

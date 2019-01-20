@@ -23,6 +23,7 @@
     "ars-components": "file:dist/ars-components",
     "core-js": "^2.5.4",
     "rxjs": "^6.0.0",
+    "typescript": "^2.9.2",
     "zone.js": "^0.8.26"
   },
   "devDependencies": {
@@ -47,7 +48,6 @@
     "ts-node": "~5.0.1",
     "tsickle": ">=0.25.5",
     "tslib": "^1.7.1",
-    "tslint": "~5.9.1",
-    "typescript": "^3.2.2"
+    "tslint": "~5.9.1"
   }
 }
