@@ -6,8 +6,9 @@
 # ----- Java
 # N/A
 
-# ----- NodeJS
+# ----- JavaScript
 node_modules/
+yarn-error.log
 
 # ----- Ruby
 # handled at projects level
