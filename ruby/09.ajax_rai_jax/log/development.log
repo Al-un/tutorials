@@ -1,0 +1,1136 @@
+  [1m[36m (170.2ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar NOT NULL, "deadline" datetime) [0m
+  [1m[35m (110.8ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (102.3ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.5ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (120.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140620130316')
+  [1m[36m (136.2ms)[0m  [1mCREATE TABLE "tasks" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "description" varchar NOT NULL, "deadline" datetime) [0m
+  [1m[35m (118.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (117.5ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
+  [1m[35m (123.7ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20140620130316')
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mSQL (149.9ms)[0m  DELETE FROM "tasks"
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  INSERT INTO "tasks" ("description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["description", "This is a task description"], ["deadline", "2014-07-01 01:00:00.000000"], ["created_at", "2018-11-13 16:10:47.342511"], ["updated_at", "2018-11-13 16:10:47.342511"]]
+  [1m[36m (118.9ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "tasks" ("description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["description", "This is another task description"], ["deadline", "2014-07-02 01:00:00.000000"], ["created_at", "2018-11-13 16:10:47.465457"], ["updated_at", "2018-11-13 16:10:47.465457"]]
+  [1m[35m (137.0ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.8ms)[0m  INSERT INTO "tasks" ("description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["description", "Yet another task description"], ["deadline", "2014-07-03 01:00:00.000000"], ["created_at", "2018-11-13 16:10:47.606230"], ["updated_at", "2018-11-13 16:10:47.606230"]]
+  [1m[36m (118.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for ::1 at 2018-11-13 17:12:41 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+
+ActionController::RoutingError (The controller-level `respond_to' feature has been extracted to the `responders` gem. Add it to your Gemfile to continue using this feature:
+  gem 'responders', '~> 2.0'
+Consult the Rails upgrade guide for details.):
+  app/controllers/tasks_controller.rb:4:in `<class:TasksController>'
+  app/controllers/tasks_controller.rb:1:in `<top (required)>'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (21.8ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (13.1ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1431.0ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:12:43 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1384.1ms)
+
+
+Started GET "/" for ::1 at 2018-11-13 17:13:37 +0100
+
+ActionController::RoutingError (uninitialized constant ActionController::RespondWith):
+  app/controllers/application_controller.rb:3:in `<class:ApplicationController>'
+  app/controllers/application_controller.rb:1:in `<top (required)>'
+  app/controllers/tasks_controller.rb:1:in `<top (required)>'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.5ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (2217.3ms)
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:13:40 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (1.3ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (0.9ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1519.2ms)
+
+
+Started GET "/" for ::1 at 2018-11-13 17:15:12 +0100
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.5ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.erb (39.1ms)
+  Rendered tasks/index.html.erb within layouts/application (231.1ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 9840ms (Views: 9833.1ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/layout.css?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2018-11-13 17:15:22 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2018-11-13 17:15:23 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2018-11-13 17:15:23 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2018-11-13 17:15:23 +0100
+
+
+Started GET "/assets/moment.js?body=1" for ::1 at 2018-11-13 17:15:23 +0100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for ::1 at 2018-11-13 17:15:23 +0100
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-11-13 17:15:23 +0100
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:15:23 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.1ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1370.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-13 17:23:56 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.erb (2.0ms)
+  Rendered tasks/index.html.erb within layouts/application (26.7ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 449ms (Views: 433.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/layout.css?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2018-11-13 17:23:57 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2018-11-13 17:23:58 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2018-11-13 17:23:58 +0100
+
+
+Started GET "/assets/moment.js?body=1" for ::1 at 2018-11-13 17:23:58 +0100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for ::1 at 2018-11-13 17:23:58 +0100
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-11-13 17:23:58 +0100
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:23:58 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.3ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1405.1ms)
+
+
+Started GET "/tasks/new" for ::1 at 2018-11-13 17:24:19 +0100
+Processing by TasksController#new as JS
+  Rendered tasks/_form.html.erb (136.3ms)
+  Rendered tasks/_datetimepicker.js (0.3ms)
+  Rendered tasks/new.js.erb (409.3ms)
+Completed 200 OK in 585ms (Views: 584.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2018-11-13 17:24:19 +0100
+
+
+Started POST "/tasks" for ::1 at 2018-11-13 17:24:41 +0100
+Processing by TasksController#create as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"toto pouet", "deadline"=>"Nov 22 2018 10:10 AM"}, "commit"=>"Create Task"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.4ms)[0m  INSERT INTO "tasks" ("description", "deadline", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["description", "toto pouet"], ["deadline", "2018-11-22 10:10:00.000000"], ["created_at", "2018-11-13 16:24:41.603613"], ["updated_at", "2018-11-13 16:24:41.603613"]]
+  [1m[36m (146.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.erb (2.0ms)
+  Rendered tasks/create.js.erb (138.3ms)
+Completed 200 OK in 499ms (Views: 343.3ms | ActiveRecord: 148.5ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2018-11-13 17:24:49 +0100
+Processing by TasksController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/_form.html.erb (4.9ms)
+  Rendered tasks/_datetimepicker.js (0.0ms)
+  Rendered tasks/edit.js.erb (270.2ms)
+Completed 200 OK in 452ms (Views: 437.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/tasks/3" for ::1 at 2018-11-13 17:25:04 +0100
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"Bwarf, j'ai tué la description", "deadline"=>"July 03 2014  1:00 AM"}, "commit"=>"Update Task", "id"=>"3"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.3ms)[0m  UPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?  [["description", "Bwarf, j'ai tué la description"], ["updated_at", "2018-11-13 16:25:04.345541"], ["id", 3]]
+  [1m[36m (154.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.erb (1.7ms)
+  Rendered tasks/update.js.erb (133.1ms)
+Completed 200 OK in 509ms (Views: 346.2ms | ActiveRecord: 156.1ms)
+
+
+Started GET "/" for ::1 at 2018-11-13 17:25:12 +0100
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.erb (2.3ms)
+  Rendered tasks/index.html.erb within layouts/application (16.2ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 303ms (Views: 301.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/layout.css?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/moment.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-11-13 17:25:12 +0100
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:25:12 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1378.8ms)
+
+
+Started GET "/tasks/4/edit" for ::1 at 2018-11-13 17:25:16 +0100
+Processing by TasksController#edit as JS
+  Parameters: {"id"=>"4"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 4]]
+  Rendered tasks/_form.html.erb (4.9ms)
+  Rendered tasks/_datetimepicker.js (0.0ms)
+  Rendered tasks/edit.js.erb (275.9ms)
+Completed 200 OK in 448ms (Views: 446.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2018-11-13 17:25:16 +0100
+
+
+Started PATCH "/tasks/4" for ::1 at 2018-11-13 17:25:19 +0100
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"toto pouet lol", "deadline"=>"November 22 2018 10:10 AM"}, "commit"=>"Update Task", "id"=>"4"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (2.4ms)[0m  [1mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "toto pouet lol"], ["updated_at", "2018-11-13 16:25:19.803108"], ["id", 4]]
+  [1m[35m (136.2ms)[0m  commit transaction
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.erb (1.4ms)
+  Rendered tasks/update.js.erb (140.4ms)
+Completed 200 OK in 459ms (Views: 311.1ms | ActiveRecord: 139.0ms)
+
+
+Started GET "/" for ::1 at 2018-11-13 17:25:21 +0100
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.erb (1.5ms)
+  Rendered tasks/index.html.erb within layouts/application (19.6ms)
+  Rendered layouts/_header.html.erb (0.0ms)
+Completed 200 OK in 293ms (Views: 292.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/layout.css?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/moment.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2018-11-13 17:25:22 +0100
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:25:22 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.8ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1558.3ms)
+
+
+Started GET "/" for ::1 at 2018-11-13 17:27:51 +0100
+Processing by TasksController#index as HTML
+  [1m[36mTask Load (0.6ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.erb (4.3ms)
+  Rendered tasks/index.html.erb within layouts/application (28.1ms)
+  Rendered layouts/_header.html.erb (0.1ms)
+Completed 200 OK in 442ms (Views: 437.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/layout.css?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2018-11-13 17:27:52 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2018-11-13 17:27:53 +0100
+
+
+Started GET "/assets/moment.js?body=1" for ::1 at 2018-11-13 17:27:53 +0100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for ::1 at 2018-11-13 17:27:53 +0100
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-11-13 17:27:53 +0100
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:27:53 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.9ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1971.8ms)
+
+
+Started GET "/tasks/new" for ::1 at 2018-11-13 17:27:57 +0100
+Processing by TasksController#new as JS
+---- New request of format text/javascript
+  Rendered tasks/_form.html.erb (6.9ms)
+  Rendered tasks/_datetimepicker.js (0.0ms)
+  Rendered tasks/new.js.erb (290.5ms)
+Completed 200 OK in 498ms (Views: 497.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/bootstrap/glyphicons-halflings-regular.woff" for ::1 at 2018-11-13 17:27:57 +0100
+
+
+Started GET "/tasks/2/edit" for ::1 at 2018-11-13 17:31:36 +0100
+Processing by TasksController#edit as JS
+  Parameters: {"id"=>"2"}
+  [1m[35mTask Load (0.2ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 2]]
+  Rendered tasks/_form.html.erb (5.0ms)
+  Rendered tasks/_datetimepicker.js (0.0ms)
+  Rendered tasks/edit.js.erb (272.5ms)
+Completed 200 OK in 466ms (Views: 463.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks/3/edit" for ::1 at 2018-11-13 17:31:41 +0100
+Processing by TasksController#edit as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.1ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 3]]
+  Rendered tasks/_form.html.erb (9.6ms)
+  Rendered tasks/_datetimepicker.js (0.0ms)
+  Rendered tasks/edit.js.erb (310.1ms)
+Completed 200 OK in 481ms (Views: 479.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/tasks/1/edit" for ::1 at 2018-11-13 17:31:46 +0100
+Processing by TasksController#edit as JS
+  Parameters: {"id"=>"1"}
+  [1m[35mTask Load (0.1ms)[0m  SELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered tasks/_form.html.erb (4.6ms)
+  Rendered tasks/_datetimepicker.js (0.0ms)
+  Rendered tasks/edit.js.erb (263.1ms)
+Completed 200 OK in 425ms (Views: 423.4ms | ActiveRecord: 0.1ms)
+
+
+Started PATCH "/tasks/1" for ::1 at 2018-11-13 17:31:50 +0100
+Processing by TasksController#update as JS
+  Parameters: {"utf8"=>"✓", "task"=>{"description"=>"This is a task descriptionaaa", "deadline"=>"July 01 2014  1:00 AM"}, "commit"=>"Update Task", "id"=>"1"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "tasks" SET "description" = ?, "updated_at" = ? WHERE "tasks"."id" = ?[0m  [["description", "This is a task descriptionaaa"], ["updated_at", "2018-11-13 16:31:50.551762"], ["id", 1]]
+  [1m[35m (134.8ms)[0m  commit transaction
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.erb (1.6ms)
+  Rendered tasks/update.js.erb (134.0ms)
+Completed 200 OK in 463ms (Views: 319.8ms | ActiveRecord: 136.5ms)
+
+
+Started GET "/" for ::1 at 2018-11-13 17:37:01 +0100
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by TasksController#index as HTML
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.erb (2.3ms)
+  Rendered tasks/index.html.erb within layouts/application (26.8ms)
+  Rendered layouts/_header.html.erb (0.3ms)
+Completed 200 OK in 464ms (Views: 448.8ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/jquery.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/turbolinks.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/affix.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/button.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/alert.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/carousel.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/collapse.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/layout.css?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/dropdown.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/tab.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/transition.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/application.css?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/scrollspy.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/modal.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/tooltip.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap/popover.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/moment.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/bootstrap-datetimepicker.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/assets/application.js?body=1" for ::1 at 2018-11-13 17:37:02 +0100
+
+
+Started GET "/favicon.ico" for ::1 at 2018-11-13 17:37:02 +0100
+
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_route.html.erb (0.7ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/routes/_table.html.erb (19.6ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (1390.4ms)
+
+
+Started DELETE "/tasks/3" for ::1 at 2018-11-13 17:37:08 +0100
+Processing by TasksController#destroy as JS
+  Parameters: {"id"=>"3"}
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT  "tasks".* FROM "tasks" WHERE "tasks"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36mSQL (1.1ms)[0m  [1mDELETE FROM "tasks" WHERE "tasks"."id" = ?[0m  [["id", 3]]
+  [1m[35m (139.5ms)[0m  commit transaction
+  [1m[36mTask Load (0.2ms)[0m  [1mSELECT "tasks".* FROM "tasks"[0m
+  Rendered tasks/_task.html.erb (1.8ms)
+  Rendered tasks/destroy.js.erb (138.0ms)
+Completed 200 OK in 509ms (Views: 350.1ms | ActiveRecord: 141.0ms)
+
+
+Started GET "/tasks" for ::1 at 2018-11-13 17:38:22 +0100
+Processing by TasksController#index as */*
+  [1m[35mTask Load (0.2ms)[0m  SELECT "tasks".* FROM "tasks"
+  Rendered tasks/_task.html.erb (1.8ms)
+  Rendered tasks/index.html.erb within layouts/application (128.8ms)
+  Rendered layouts/_header.html.erb (0.4ms)
+Completed 200 OK in 619ms (Views: 618.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/tasks" for ::1 at 2018-11-13 17:38:32 +0100
+Processing by TasksController#index as JSON
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template tasks/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/github/_tutorials/ruby/9.ajax_rai_jax/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby25-x64/lib/ruby/2.5.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (0.6ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (0.8ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (998.2ms)
+
+
+Started GET "/tasks" for ::1 at 2018-11-13 17:38:51 +0100
+Processing by TasksController#index as JSON
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.0ms)
+
+ActionView::MissingTemplate (Missing template tasks/index, application/index with {:locale=>[:en], :formats=>[:json], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :coffee, :jbuilder]}. Searched in:
+  * "D:/github/_tutorials/ruby/9.ajax_rai_jax/app/views"
+):
+  actionview (4.2.10) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.10) lib/action_view/lookup_context.rb:121:in `find'
+  C:in `find_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.10) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:46:in `render_template'
+  actionview (4.2.10) lib/action_view/renderer/renderer.rb:27:in `render'
+  actionview (4.2.10) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.10) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.10) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.10) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.10) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  C:/Ruby25-x64/lib/ruby/2.5.0/benchmark.rb:308:in `realtime'
+  activesupport (4.2.10) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.10) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.10) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.10) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.10) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.10) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.10) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.10) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.10) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.10) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.10) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:74:in `dispatch'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:43:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.10) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.10) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.11) lib/rack/etag.rb:24:in `call'
+  rack (1.6.11) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.11) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.11) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.10) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.10) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.10) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.10) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.10) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.10) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.10) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.10) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.11) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.11) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.10) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.10) lib/action_dispatch/middleware/static.rb:120:in `call'
+  rack (1.6.11) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.10) lib/rails/engine.rb:518:in `call'
+  railties (4.2.10) lib/rails/application.rb:165:in `call'
+  rack (1.6.11) lib/rack/lock.rb:17:in `call'
+  rack (1.6.11) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.11) lib/rack/handler/webrick.rb:88:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:140:in `service'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/httpserver.rb:96:in `run'
+  C:/Ruby25-x64/lib/ruby/2.5.0/webrick/server.rb:307:in `block in start_thread'
+
+
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_source.erb (1.0ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (9.3ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered C:/Ruby25-x64/lib/ruby/gems/2.5.0/gems/actionpack-4.2.10/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (1337.6ms)
