@@ -3,59 +3,70 @@ import { TestBed, inject } from '@angular/core/testing';
 import { DummyService } from './dummy.service';
 import { SlaveService } from './slave.service';
 
-function testSetup() {
-  require('./dummy.js');
+// /**
+//  * Encapsulate beforeTest in a single function
+//  */
+// function testSetup() {
+//   require('./dummy.js');
 
-  const slaveServiceSpy = jasmine.createSpyObj('SlaveService', [
-    'getRandomNumber',
-    'getBaseNumber'
-  ]);
-  const stubValue = 42;
-  const dummyService = new DummyService(slaveServiceSpy);
+//   const slaveServiceSpy = jasmine.createSpyObj('SlaveService', [
+//     'getRandomNumber',
+//     'getBaseNumber'
+//   ]);
+//   const stubValue = 42;
+//   const dummyService = new DummyService(slaveServiceSpy);
 
-  slaveServiceSpy.getBaseNumber.and.returnValue(stubValue);
-  return { dummyService, stubValue, slaveServiceSpy };
-}
+//   slaveServiceSpy.getBaseNumber.and.returnValue(stubValue);
+//   return { dummyService, stubValue, slaveServiceSpy };
+// }
 
 describe('DummyService (with TestBed)', () => {
-  // let dummyService: DummyService;
-  // let slaveServiceSpy: jasmine.SpyObj<SlaveService>;
+  const base = 39;
+  const random = 42;
+  let dummyService: DummyService;
+  let slaveServiceSpy: jasmine.SpyObj<SlaveService>;
+  let slaveSpy: any;
 
-  // beforeEach(() => {
-  //   const spy = jasmine.createSpyObj('SlaveService', [
-  //     'getRandomNumber',
-  //     'getBaseNumber'
-  //   ]);
+  beforeEach(() => {
+    const slaveSpy = jasmine.createSpyObj('SlaveService', [
+      'getRandomNumber',
+      'getBaseNumber'
+    ]);
+    slaveSpy.getRandomNumber.and.returnValue(random);
+    slaveSpy.getBaseNumber.and.returnValue(base);
 
-  //   TestBed.configureTestingModule({
-  //     providers: [DummyService, { provide: SlaveService, useValue: spy }]
-  //   });
+    TestBed.configureTestingModule({
+      providers: [DummyService, { provide: SlaveService, useValue: slaveSpy }]
+    });
 
-  //   dummyService = TestBed.get(DummyService);
-  //   slaveServiceSpy = TestBed.get(SlaveService);
-  // });
+    dummyService = TestBed.get(DummyService);
+    slaveServiceSpy = TestBed.get(SlaveService);
+  });
 
   it('should be created', inject([DummyService], (service: DummyService) => {
     expect(service).toBeTruthy();
   }));
 
   it('getSlaveBaseNumber returns slave service base number', () => {
-    const { dummyService, stubValue, slaveServiceSpy } = testSetup();
-    // const stubValue = 42;
-    // slaveServiceSpy.getBaseNumber.and.returnValue(stubValue);
+    // // when using test function
+    // const { dummyService, stubValue, slaveServiceSpy } = testSetup();
 
+    // slaveServiceSpy.getBaseNumber.and.returnValue(stubValue);
+    slaveSpy.getBaseNumber.and.returnValue(base);
     expect(dummyService.getSlaveBaseNumber()).toBe(
-      stubValue,
+      base,
       'ouaip, base number from slave!'
     );
+    expect(slaveSpy.getBaseNumber.toHaveBeenCalledWith(0)).toBeTruthy();
     expect(slaveServiceSpy.getBaseNumber.calls.count()).toBe(1);
     expect(slaveServiceSpy.getBaseNumber.calls.mostRecent().returnValue).toBe(
-      stubValue
+      base
     );
   });
 
   it('test globvar', () => {
-    const { dummyService, stubValue, slaveServiceSpy } = testSetup();
+    // // when using test function
+    // const { dummyService, stubValue, slaveServiceSpy } = testSetup();
 
     dummyService.testGlobVar();
   });
