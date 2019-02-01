@@ -28,9 +28,10 @@ describe('DummyService (with TestBed)', () => {
   let slaveSpy: any;
 
   beforeEach(() => {
-    const slaveSpy = jasmine.createSpyObj('SlaveService', [
+    slaveSpy = jasmine.createSpyObj('SlaveService', [
       'getRandomNumber',
-      'getBaseNumber'
+      'getBaseNumber',
+      'baseNumber'
     ]);
     slaveSpy.getRandomNumber.and.returnValue(random);
     slaveSpy.getBaseNumber.and.returnValue(base);
@@ -57,7 +58,10 @@ describe('DummyService (with TestBed)', () => {
       base,
       'ouaip, base number from slave!'
     );
-    expect(slaveSpy.getBaseNumber.toHaveBeenCalledWith(0)).toBeTruthy();
+    expect(slaveSpy.getBaseNumber).toHaveBeenCalled();
+    // expect(slaveSpy.baseNumber).toBe(5);
+    expect(slaveSpy.getBaseNumber.calls.count()).toBe(1);
+    expect(slaveSpy.getBaseNumber.calls.mostRecent().returnValue).toBe(base);
     expect(slaveServiceSpy.getBaseNumber.calls.count()).toBe(1);
     expect(slaveServiceSpy.getBaseNumber.calls.mostRecent().returnValue).toBe(
       base
@@ -69,6 +73,31 @@ describe('DummyService (with TestBed)', () => {
     // const { dummyService, stubValue, slaveServiceSpy } = testSetup();
 
     dummyService.testGlobVar();
+  });
+});
+
+describe('DummmyService (promises)', () => {
+  let dummySpy: jasmine.SpyObj<DummyService>;
+
+  beforeEach(() => {
+    dummySpy = jasmine.createSpyObj('DummyService', [
+      'addTwo',
+      'addPromiseTwo',
+      'addFromBaseNumber'
+    ]);
+    dummySpy.addPromiseTwo.and.returnValue(Promise.resolve(42));
+    // dummySpy.addFromBaseNumber.and.returnValue(Promise.reject(''));
+
+    TestBed.configureTestingModule({
+      providers: [{ provide: DummyService, useValue: dummySpy }]
+    });
+  });
+
+  it('returns 42', async done => {
+    const addTwo = await dummySpy.addPromiseTwo(999);
+    expect(addTwo).toBe(42);
+    expect(dummySpy.addPromiseTwo).toHaveBeenCalledTimes(1);
+    done();
   });
 });
 

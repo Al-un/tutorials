@@ -35,7 +35,11 @@ export class DummyService {
   public addPromiseTwo(input = 1): Promise<number> {
     return new Promise(function(resolve, reject) {
       setTimeout(function() {
-        resolve(input + 2);
+        if (input < 10) {
+          resolve(input + 2);
+        } else {
+          reject('Number should be below 10');
+        }
       }, 750);
     });
   }
