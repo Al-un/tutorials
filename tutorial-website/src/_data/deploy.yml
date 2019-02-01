@@ -19,6 +19,9 @@
       folder: redux
     - name: test Jest Enzyme
       folder: test-jest-enzyme
+    - name: styled-components
+      folder: styled-components
+      desc: from [styled-components documentation](https://www.styled-components.com/docs/)
 
 - name: Angular
   folder: angular

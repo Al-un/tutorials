@@ -1,0 +1,13 @@
+{
+  "main.css": "/tutorials/deploy/react/styled-components/static/css/main.b087c73d.chunk.css",
+  "main.js": "/tutorials/deploy/react/styled-components/static/js/main.814caf8c.chunk.js",
+  "main.js.map": "/tutorials/deploy/react/styled-components/static/js/main.814caf8c.chunk.js.map",
+  "static/js/1.9ef45064.chunk.js": "/tutorials/deploy/react/styled-components/static/js/1.9ef45064.chunk.js",
+  "static/js/1.9ef45064.chunk.js.map": "/tutorials/deploy/react/styled-components/static/js/1.9ef45064.chunk.js.map",
+  "runtime~main.js": "/tutorials/deploy/react/styled-components/static/js/runtime~main.f9ab77f6.js",
+  "runtime~main.js.map": "/tutorials/deploy/react/styled-components/static/js/runtime~main.f9ab77f6.js.map",
+  "static/css/main.b087c73d.chunk.css.map": "/tutorials/deploy/react/styled-components/static/css/main.b087c73d.chunk.css.map",
+  "index.html": "/tutorials/deploy/react/styled-components/index.html",
+  "precache-manifest.d259de4b0ea72bbb25a6a81749e122b9.js": "/tutorials/deploy/react/styled-components/precache-manifest.d259de4b0ea72bbb25a6a81749e122b9.js",
+  "service-worker.js": "/tutorials/deploy/react/styled-components/service-worker.js"
+}
