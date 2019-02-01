@@ -1,0 +1,18 @@
+{
+  "name": "shared",
+  "version": "1.0.0",
+  "description": "Shared components",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "devDependencies": {},
+  "scripts": {
+    "prebuild": "del-cli dist",
+    "build": "babel src -d dist --ignore \"src/**/*.spec.js\",\"src/**/*.stories.js\"",
+    "test": "jest"
+  },
+  "jest": {
+    "setupFiles": [
+      "../../setupJest.js"
+    ]
+  }
+}
