@@ -1,3 +1,6 @@
 {
-    "go.gopath": "C:/git.perso/_tutorials/go"
+    "go.gopath": "C:/git.perso/_tutorials/go",
+    "python.linting.pylintEnabled": true,
+    "python.linting.enabled": true,
+    "python.pythonPath": "C:\\Program Files\\Python\\Python3.7\\python.exe"
 }
