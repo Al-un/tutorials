@@ -1,9 +1,101 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func main() {
-	// V11 Variadic functions
+	// V15 Structure
+	
+
+	// // V14 Pointer
+	// b := 255
+	// var a = &b
+	// fmt.Printf("Type of a is %T\n", a)
+	// fmt.Println("Address of b is", a)
+	// fmt.Println("Value of b is", *a)
+	// *a++
+	// fmt.Println("Value of b is", b)
+	// // nil pointer
+	// c := "pouet"
+	// var d *string
+	// fmt.Println("d is", d)
+	// d = &c
+	// fmt.Println("d is", d)
+	// fmt.Println("c via *d is", *d)
+	// // pointer & functions
+	// changePointer(a)
+	// fmt.Println("Value of b after changePointer is", b)
+
+	// // V13 String
+	// name := "Hello world"
+	// fmt.Println(name)
+	// for i := 0; i < len(name); i++ {
+	// 	fmt.Printf("%x ", name[i])
+	// }
+	// fmt.Printf("\n")
+	// for i := 0; i < len(name); i++ {
+	// 	fmt.Printf("%c ", name[i])
+	// }
+	// name = "Señor"
+	// for i := 0; i < len(name); i++ {
+	// 	fmt.Printf("%x ", name[i])
+	// }
+	// fmt.Printf("\n")
+	// nameRunes := []rune(name)
+	// for i := 0; i < len(nameRunes); i++ {
+	// 	fmt.Printf("%c ", nameRunes[i])
+	// }
+	// fmt.Printf("\n")
+	// for index, rune := range name {
+	// 	fmt.Printf("%c starts at byte %d\n", rune, index)
+	// }
+	// byteSlice := []byte{0x43, 0x61, 0x66, 0xC3, 0xA9}
+	// str := string(byteSlice)
+	// fmt.Println(str)
+	// runeSlice := []rune{0x0053, 0x0065, 0x00f1, 0x006f, 0x0072}
+	// str = string(runeSlice)
+	// fmt.Println(str)
+	// fmt.Printf("length of %s is %d\n", str, utf8.RuneCountInString(str))
+	// // mutation
+	// toto := "toto"
+	// fmt.Println(mutateStr([]rune(toto)))
+
+	// // V12 Maps
+	// // personSalary := make(map[string]int)
+	// personSalary := map[string]int{"pouet": 123}
+	// personSalary["steve"] = 12000
+	// personSalary["jamie"] = 15000
+	// personSalary["mike"] = 9000
+	// personSalary["joe"] = 0
+	// fmt.Println("personSalary map contents:", personSalary)
+	// personSalary["jamie"] = 14000
+	// fmt.Println("personSalary map contents:", personSalary)
+	// employee := "jamie"
+	// fmt.Println("Salary of", employee, "is", personSalary[employee])
+	// fmt.Println("Salary of", "bob", "is", personSalary["bob"])
+	// val, ok := personSalary["bob"]
+	// fmt.Println("Bob has a salary (", ok, "):", val)
+	// val, ok = personSalary["joe"]
+	// fmt.Println("Joe has a salary (", ok, "):", val)
+	// for key, val := range personSalary {
+	// 	fmt.Printf("personSalary[%s] = %d\n", key, val)
+	// }
+	// delete(personSalary, "mike")
+	// for key, val := range personSalary {
+	// 	fmt.Printf("personSalary[%s] = %d\n", key, val)
+	// }
+
+	// // V11 Variadic functions
+	// find(89, 90, 89, 95)
+	// find(45, 35, 24, 65489516, 45, 626626)
+	// find(456, 123, 987, 654, 321, 654)
+	// nums := []int{89, 80, 95}
+	// find(89, nums...)
+	// // modify a slice
+	// welcome := []string{"hello", "world"}
+	// change(welcome...)
+	// fmt.Println(welcome)
 
 	// // V10 Array
 	// var a [3]int
@@ -344,4 +436,32 @@ func countries() []string {
 	countriesCpy := make([]string, len(neededCountries))
 	copy(countriesCpy, neededCountries) //copies neededCountries to countriesCpy
 	return countriesCpy
+}
+
+func find(num int, nums ...int) {
+	fmt.Printf("Type if nums is %T\n", nums)
+	found := false
+	for i, v := range nums {
+		if v == num {
+			fmt.Println(num, "fond at index", i, "in", nums)
+			found = true
+		}
+	}
+	if !found {
+		fmt.Println(num, "not found in", nums)
+	}
+	fmt.Printf("\n")
+}
+
+func change(s ...string) {
+	s[0] = "Go"
+}
+
+func mutateStr(s []rune) string {
+	s[0] = 'a'
+	return string(s)
+}
+
+func changePointer(val *int) {
+	*val = 55
 }
