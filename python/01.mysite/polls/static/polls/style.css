@@ -1,0 +1,12 @@
+li a {
+    color: green;
+}
+
+body{
+    background-image: linear-gradient(to right, #aaa, #ddd), url("images/roses.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: repeat-y;
+    background-blend-mode: darken;
+    background-color: #eee;
+}
