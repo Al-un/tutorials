@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+{% for survey in object_list %}
+<div class="surveys">
+    <h3>{{ survey.topic }}</h3>
+
+    <div class="choices">
+        {% for choice in survey.choice_set.all %}
+        <a href="{% url 'surveys:vote' choice.id %}" class="choice">
+            <span>Vote for {{ choice.name }}</span>
+            <span>{{ choice.count }} vote(s)</span>
+        </a>
+        {% endfor %}
+    </div>
+</div>
+{% endfor %}
+
+
+{% endblock content %}
