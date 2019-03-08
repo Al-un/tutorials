@@ -27,3 +27,5 @@ git subtree push --prefix python/06.aws_kinesis/ heroku-aws-kinesis master
     - https://stackoverflow.com/questions/50763962/heroku-and-django-no-default-language-could-be-detected-for-this-app
 - _App not compatible with buildpack: https://buildpack-registry.s3.amazonaws.com/buildpacks/heroku/python.tgz_:
     - https://stackoverflow.com/questions/46109465/app-not-compatible-with-buildpack-heroku
+- _No matching distribution found for apturl==0.5.2_:
+    - Because of _Installing python-3.6.8_, adding a `runtime.txt`
