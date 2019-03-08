@@ -1,0 +1,3 @@
+- `diamond.py`: testing multiple inheritance with the diamond problem:
+    - Classes `B` & `C` both extend `A` and override a method `doSomething()` from A
+    - Class `D` extend both `B` & `C`: which implementation of `doSomething()` is used?
