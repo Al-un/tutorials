@@ -137,6 +137,10 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+# AWS Access
+AWS_ACCESS_KEY_ID = os.getenv('AWS_ACCESS_KEY_ID', '')
+AWS_SECRET_ACCESS_KEY = os.getenv('AWS_SECRET_ACCESS_KEY', '')
+
 # https://devcenter.heroku.com/articles/django-app-configuration
 # active django heroku
 django_heroku.settings(locals())
