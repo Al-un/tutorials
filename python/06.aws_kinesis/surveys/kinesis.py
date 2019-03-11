@@ -20,8 +20,8 @@ def put_vote_to_stream(request, choice):
     payload_json = json.dumps(payload)
 
     now = datetime.now()
-    print("%s prepare for kinensis_client.put_record" % now)
+    print("prepare for kinensis_client.put_record")
     output = kinesis_client.put_record(
         StreamName=kinesis_stream, Data=payload_json, PartitionKey='vote')
-    print("%s kinesis_client.put_record finished" % now)
+    print("kinesis_client.put_record finished")
     print(output)
