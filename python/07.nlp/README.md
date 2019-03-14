@@ -1,0 +1,2 @@
+- https://likegeeks.com/nlp-tutorial-using-python-nltk/
+- https://pythonspot.com/category/nltk/
