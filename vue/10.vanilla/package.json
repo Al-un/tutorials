@@ -1,0 +1,18 @@
+{
+  "name": "vanilla-vuejs",
+  "version": "1.0.0",
+  "description": "testing Vue.js from CDN",
+  "main": "index.js",
+  "dependencies": {
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "jest": "^24.5.0",
+    "vue": "^2.6.9",
+    "vue-template-compiler": "^2.6.9"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC"
+}

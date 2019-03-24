@@ -1,0 +1,49 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Hello Vanilla Vue.js</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+  </head>
+
+  <body>
+    <main style="width: 60%; margin: auto;">
+      <h2>Test</h2>
+
+      <div id="testarea">
+        Loading
+      </div>
+
+      <div id="btn-counters">
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+        <button-counter></button-counter>
+      </div>
+
+      <div>
+        In hac habitasse platea dictumst. Pellentesque enim sapien, efficitur et
+        aliquet id, commodo eget risus. In tristique erat mi, vitae mattis velit
+        faucibus dignissim. Orci varius natoque penatibus et magnis dis
+        parturient montes, nascetur ridiculus mus. Morbi et sem suscipit,
+        maximus sem sed, malesuada turpis. Aenean eros est, vehicula nec egestas
+        eget, aliquam vitae dolor. Donec suscipit leo a ante maximus tempus.
+        Vestibulum congue, lacus in malesuada porttitor, felis nunc consequat
+        nulla, ac efficitur tellus nulla id elit. Mauris purus turpis, congue
+        quis ex ac, auctor porta neque. Donec nunc ligula, porta id augue vitae,
+        consectetur euismod risus. Mauris tellus libero, tempus vitae nisi a,
+        bibendum sodales arcu. Curabitur ut ex velit. Quisque at lacus eget orci
+        mattis rhoncus.
+      </div>
+
+      <div id="btn-number">
+        <button-number></button-number>
+      </div>
+
+    </main>
+
+    <script src="./buttons.js"></script>
+    <script>
+      new Vue({ el: "#btn-counters" });
+      new Vue({ el: '#btn-number'});
+    </script>
+  </body>
+</html>
