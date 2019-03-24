@@ -1,5 +1,5 @@
 {
-    "go.gopath": "C:/git.perso/_tutorials/go",
+    "go.gopath": "/home/al-un/git/go",
     "python.linting.pylintEnabled": true,
     "python.linting.enabled": true,
     "python.pythonPath": "/usr/bin/python3"
