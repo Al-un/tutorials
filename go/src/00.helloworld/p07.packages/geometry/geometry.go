@@ -4,7 +4,7 @@ import (
 	"fmt"
 	"log"
 
-	"01.geometry/rectangle"
+	"00.helloworld/p07.packages/geometry/rectangle"
 )
 
 // 1. Variables
