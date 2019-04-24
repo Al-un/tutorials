@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://localhost:8000/static/frontend/",
+  "proxy": "http://localhost:8000",
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/jest": "24.0.11",
@@ -26,7 +27,7 @@
     "build": "react-scripts build",
     "build:local": "PUBLIC_URL=http://localhost:8000/static/frontend react-scripts build",
     "build:s3": "PUBLIC_URL=https://s3.eu-west-3.amazonaws.com/test-blah-pouet/frontend/ npm run build",
-    "copy:assets" : "cp ./build/index.html ../templates/frontend/index.html && cp -R ./build/static ../staticfiles/frontend/static",
+    "copy:assets": "cp ./build/index.html ../templates/frontend/index.html",
     "deploy:local": "npm run build:local && npm run copy:assets",
     "deploy:s3": "npm run build:s3 && npm run copy:assets",
     "test": "react-scripts test",

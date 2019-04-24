@@ -1,13 +1,16 @@
 import React from "react";
+// import { NavLink, HashRouter, Router, BrowserRouter } from "react-router-dom";
 import { NavLink, HashRouter } from "react-router-dom";
 
 import "./App.css";
-import history from "./routes/history";
+// import history from "./routes/history";
 import Routes from "./routes/routes";
 import { Provider } from "react-redux";
 import store from "./store/configureStore";
 
 const App: React.FC = () => {
+  // const basename = "/frontend";
+
   return (
     <div className="App">
       <header className="App-header">some header here</header>

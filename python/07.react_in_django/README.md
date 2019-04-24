@@ -40,6 +40,7 @@ Environment is assumed to be ready: `pyenv`, `pipenv`, `npm` or `yarn`...
 - Set up Redux
 - Set up Thunk
 - Add react-redux and @types/react-redux
+- Add [CORS](https://github.com/OttoYiu/django-cors-headers) configuration for Django 
 
 ## React
 
