@@ -17,12 +17,14 @@ class TodoListItem extends React.Component<any, any> {
     return (
       <div className="todoListItem">
         <div className="status">{this.props.todo.done ? "Done" : "Todo"}</div>
+        <div className="content">
+        {this.props.todo.id} : {this.props.todo.text}
+        </div>
         <div className="status">
           <form onSubmit={this.handleFormSubmit}>
             <button>Delete</button>
           </form>
         </div>
-        <div className="content">{this.props.todo.text}</div>
       </div>
     );
   }

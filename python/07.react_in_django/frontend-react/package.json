@@ -2,8 +2,7 @@
   "name": "frontend-react",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://localhost:8000/static/frontend/",
-  "proxy": "http://localhost:8000",
+  "homepage": "http://localhost:8000/static/frontend/", 
   "dependencies": {
     "@types/axios": "^0.14.0",
     "@types/jest": "24.0.11",
