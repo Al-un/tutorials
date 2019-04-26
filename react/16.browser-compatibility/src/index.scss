@@ -1,0 +1,52 @@
+body {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  padding: 1rem 0.5rem;
+  margin: auto;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #123456;
+  color: white;
+
+  div {
+    margin: 8px 0px;
+  }
+
+  nav {
+    display: flex;
+    a {
+      height: 40px;
+      line-height: 40px;
+      font-size: 16px;
+      flex: 1;
+      color: white;
+      text-decoration: none;
+      text-align: center;
+      border-left: 1px solid white;
+      background: #345678;
+
+      &:last-child {
+        border-right: 1px solid white;
+      }
+
+      &:hover {
+        background: #6789ab;
+      }
+    }
+  }
+}
+
+pre {
+  padding: 8px;
+  box-sizing: border-box;
+  background-color: #111;
+  color: #0f0;
+  font-family: 'Courier New', monospace;
+  font-size: 14px;
+}
