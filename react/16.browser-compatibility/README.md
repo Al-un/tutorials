@@ -17,3 +17,5 @@ Default _browsersList_ is:
   }
 }
 ```
+
+<https://slides.com/ai/browserslist>

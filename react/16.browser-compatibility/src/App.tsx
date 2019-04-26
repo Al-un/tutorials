@@ -3,7 +3,7 @@ import { BrowserRouter, NavLink } from "react-router-dom";
 
 import Routes from "./Routes";
 
-const App: React.FC = () => {
+const App: React.FC = (): JSX.Element => {
   return (
     <div>
       <BrowserRouter>

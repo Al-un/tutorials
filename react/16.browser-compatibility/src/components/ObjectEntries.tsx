@@ -1,7 +1,7 @@
 import React from "react";
 
-export default class ObjectEntries extends React.Component<any, any> {
-  render() {
+export default class ObjectEntries extends React.Component<{}, {}> {
+  public render(): JSX.Element {
     const obj = { foo: "bar", baz: 42 };
     const entries = Object.entries(obj);
 

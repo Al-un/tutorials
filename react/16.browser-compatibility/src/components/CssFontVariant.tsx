@@ -2,8 +2,8 @@ import React from "react";
 
 import "./CssFontVariant.scss";
 
-export default class CssFontVariant extends React.Component<any, any> {
-  render() {
+export default class CssFontVariant extends React.Component<{}, {}> {
+  public render(): JSX.Element {
     return (
       <div>
         <h2>

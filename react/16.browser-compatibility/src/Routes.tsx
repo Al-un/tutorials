@@ -6,14 +6,18 @@ import CssMath from "./components/CssMath";
 import ObjectEntries from "./components/ObjectEntries";
 import CssFontVariant from "./components/CssFontVariant";
 
-export default class Routes extends React.Component<any, any> {
-  render() {
+export default class Routes extends React.Component<{}, {}> {
+  public render(): JSX.Element {
     return (
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/css-math" component={CssMath} />
         <Route exact path="/object-entries" component={ObjectEntries} />
-        <Route exact path="/css-font-variant-numeric" component={CssFontVariant} />
+        <Route
+          exact
+          path="/css-font-variant-numeric"
+          component={CssFontVariant}
+        />
       </Switch>
     );
   }
