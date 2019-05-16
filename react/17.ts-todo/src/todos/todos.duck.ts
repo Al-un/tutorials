@@ -54,10 +54,7 @@ const reducer = (state = initialState, action: TodoActionTypes): TodoState => {
         return state;
       }
     case ADDED:
-      console.log("Added", action.payload);
-      const pouet = { ...state, list: [...state.list, action.payload] };
-      console.log("new state", pouet);
-      return pouet;
+      return { ...state, list: [...state.list, action.payload] };
     case DELETED:
       const updatedList = state.list.filter(
         (todo: Todo): boolean => todo.id !== action.payload

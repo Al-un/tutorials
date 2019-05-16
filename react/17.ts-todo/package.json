@@ -24,8 +24,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "tsc && eslint src --ext .tsx,.ts",
-    "precommit": "npm run lint"
+    "lint": "tsc && eslint src --ext .tsx,.ts"
   },
   "browserslist": {
     "production": [
@@ -42,7 +41,13 @@
   "devDependencies": {
     "eslint-config-prettier": "^4.2.0",
     "eslint-plugin-prettier": "^3.1.0",
+    "husky": "^2.3.0",
     "prettier": "^1.17.1",
     "prettier-eslint": "^8.8.2"
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit": "yarn run lint"
+    }
   }
 }

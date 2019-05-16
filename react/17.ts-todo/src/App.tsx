@@ -16,10 +16,6 @@ const App: React.FC = (): JSX.Element => {
       <header className="App-header">some header here</header>
 
       <main className="container">
-        <img
-          src="https://hisouten.koumakan.jp/images/4/40/Swr-portrait-yuyuko.png"
-          title="Yuyuko"
-        />
         <Provider store={store}>
           <BrowserRouter>
             <nav className="navbar">

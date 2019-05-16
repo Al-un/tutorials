@@ -44,7 +44,7 @@ export default class TodoList extends React.Component<TodoListProps, {}> {
         <TodoListItem
           todo={todo}
           deleteTodo={this.props.deleteTodo}
-          // key={todo.id}
+          key={todo.id}
         />
       )
     );
