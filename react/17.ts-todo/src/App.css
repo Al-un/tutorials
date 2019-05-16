@@ -1,0 +1,39 @@
+.App-header {
+  background-color: #282c34;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  color: white;
+}
+
+.container {
+  width: 98%;
+  margin: auto;
+  max-width: 1000px;
+}
+
+.navbar {
+  display: flex;
+}
+
+.navbar a {
+  flex: 1;
+  color: #123456;
+  text-decoration: none;
+  text-align: center;
+  padding: 6px 0px;
+  border-bottom: 4px double #123456;
+  transition: background-color 0.2s;
+}
+
+.navbar a:hover{
+  background-color: #abcdef;
+}
+
+.navbar a.active{
+  background-color: lightsalmon;
+  border-bottom-color: brown;
+  color: brown;
+}
