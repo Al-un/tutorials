@@ -24,7 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "lint": "tsc && eslint src --ext .tsx,.ts"
+    "lint": "tsc && eslint src --ext .tsx,.ts",
+    "precommit": "npm run lint"
   },
   "browserslist": {
     "production": [
