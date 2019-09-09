@@ -1,0 +1,18 @@
+.todoListItem {
+  display: flex;
+  margin: 8px 0px;
+  padding: 8px 0px;
+  border-bottom: 2px solid teal;
+}
+
+.todoListItem:first-child {
+  border-top: 2px solid teal;
+}
+
+.todoListItem .status {
+  width: 120px;
+}
+
+.todoListItem .content {
+  flex: 1;
+}
